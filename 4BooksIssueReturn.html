@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Book Issue/Return</title>				
+</head>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+<figure>
+<img src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png" alt="admin icon" style="width:100px;height:100px;"></br>
+<figcaption>ADMINISTRATION ACCOUNT</figcaption></br></br>
+</figure>
+
+<a href=""target="_blank">Manage Books</a><br>
+<a href="" target="_blank">Student Request</a><br>
+<a href=""target="_blank">Book Issue/Return</a><br>
+<a href=""target="_blank">Log out</a><br></br>
+
+<h1>BOOK ISSUE/RETURN</h1>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Home')">Table1</button>
+  <button class="tablinks" onclick="openCity(event, 'Add')">Table2</button>
+</div>
+
+<div id="home" class="tabcontent">
+<h1>Table1</h1>
+ <table style="width:100%">
+    <tr>
+      <th>Title</th>
+      <th>Borrower</th>
+      <th>Issue Date</th>
+	  <th>Return Date</th>
+	  <th>Actual Return Date</th>
+	  <th>Status</th>
+	  <th>Save</th>
+    </tr>
+    <tr>
+      <td>Cpet12L</td>
+      <td>Student 1</td>
+      <td>24/10/2001</td>
+	  <td>30/10/21</td>
+	  <td>27/10/21</td>
+	  <td>
+
+<select name="Status" id="Status">
+  <option value="returned">returned</option>
+  <option value="unreturned">unreturned</option>
+  </select></td>
+	  <td><button class="btn"><i class="fa fa-trash"></i> Save</button></td>
+	  
+
+    </tr>
+    <tr>
+      <td>ARTS</td>
+      <td>student 2</td>
+      <td>24/10/21</td>
+	  <td>30/10/21</td>
+	  <td>30/12/21</td>
+	  <td><select name="Status" id="Status">
+  <option value="returned">returned</option>
+  <option value="unreturned">unreturned</option></td>
+
+	  <td><button class="btn"><i class="fa fa-trash"></i> Save</button></td>
+    </tr>
+       <tr>
+      <td>MATH</td>
+      <td>student 3</td>
+      <td>24/10/21</td>
+	  <td>30/10/21</td>
+	  <td>N/A</td>
+	  <td><select name="Status" id="Status">
+  <option value="returned">returned</option>
+  <option value="unreturned">unreturned</option></td>
+
+	  <td><button class="btn"><i class="fa fa-trash"></i> Save</button></td>
+    </tr>
+
+
+  </table>
+  </div>
+<div id="home" class="tabcontent">  
+<h1>Table2</h1>		
+ <table style="width:100%">
+    <tr>
+      <th>Title</th>
+      <th>Borrower</th>
+      <th>Return Date</th>
+	  <th>Actual Return Date</th>
+	  <th>Fine</th>
+	  <th>Status</th>
+	  <th>Save</th>
+ <tr>
+      <td>ARTS</td>
+      <td>student 2</td>
+      <td>24/10/21</td>
+	  <td>30/12/21</td>
+	  <td>P50</td>
+	  <td><select name="Status" id="Status">
+  <option value="paid">paid</option>
+  <option value="unpaid">unpaid</option></td> 	
+  	<td><button class="btn"><i class="fa fa-trash"></i> Save</button></td>	
+ <tr>
+      <td>ARTS</td>
+      <td>student 2</td>
+      <td>24/10/21</td>
+	  <td>N/A</td>
+	  <td>P50</td>
+	  <td><select name="Status" id="Status">
+  <option value="paid">paid</option>
+  <option value="unpaid">unpaid</option></td>				
+			<td><button class="btn"><i class="fa fa-trash"></i> Save</button></td>	
+				
+				
+				
+</html>
