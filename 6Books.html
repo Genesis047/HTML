@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Books</title>				
-</head>			
+	<title>Books</title>			
+</head>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>	
+<body>
+	<a href="" target="_blank">Home</a></br>
+	<a href="" target="_blank">Login</a></br>
+	<a href="" target="_blank">Book</a></br>
+	<a href="" target="_blank">About</a></br>
+
+	<h1>Add Books</h1>
 	<form id="form"> 
-  <input type="search" id="query" name="q" placeholder="Search book...">
-  <button>Search</button>
-</form></br>			
-	<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Home')">ADD</button>
-  <button class="tablinks" onclick="openCity(event, 'Add')">HOME</button>
-</div>			
-<li>
-	<lo>Title 1</lo>	
-	<input type="checkbox">	</li>	<li> 
-<lo>Title 2</lo>			
-	<input type="checkbox">	</li>
-	<li>
-	<lo>Title 3</lo>	 
-	<input type="checkbox">	</li>	<li> 
-<lo>Title 4</lo>
-				<input type="checkbox">	</li>
-				
-<input type="submit" value="Cancel">  
-<input type="submit" value="Apply">			
-</html>
+	  <input type="search" id="query" name="q" placeholder="Search book...">
+	  <button>Search</button>
+	</form></br>
+
+	 <table style="width:100%">
+	    <tr>
+	    	<th>Image</th>
+		    <th>Book Title</th>
+		    <th>Author</th>
+		    <th>Published Date</th>
+			<th>ISBN</th>
+			<th>Action</th>
+	    </tr>
+	    	<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+	      	<td>Entrepreneurship</td>
+		    <td>Francis Chang</td>
+		    <td>21/01/2001</td>
+			<td>978-3-16-148410-0</td>
+			<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
+	    </tr>
+	    <tr>
+	    	<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+	      	<td>Physical Education</td>
+	      	<td>Harley Yu</td>
+	      	<td>21/04/2012</td>
+		  	<td>978-3-16-167410-0</td>
+		  	<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
+	    </tr>
+	    <tr>
+	    	<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+	      	<td>Social Science</td>
+	      	<td>Chris Cruz</td>
+	      	<td>21/01/2002</td>
+		  	<td>978-3-16-160470-0</td>
+		  	<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
+	    </tr>
+	  <tr>
+	  		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+	      	<td>Political Science</td>
+	      	<td>Anna Feng</td>
+	      	<td>18/04/2003</td>
+		  	<td>978-3-16-169530-0</td>
+		  	<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
+	    </tr>
+
+	  </table>
+  </div>
+  
+
