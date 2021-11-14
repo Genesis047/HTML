@@ -1,19 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Library Management System</title>
+  <style>
+    .heading { grid-area: header; }
+    .linkbar { grid-area: linkbar; }
+    .content_1 { grid-area: content_1; }
+    .image_1 {grid-area: image_1;}
+    .content_2 { grid-area: content_2; }
+    .image_2 {grid-area: image_2;}
+    .content_3 { grid-area: content_3; }
+    .image_3 {grid-area: image_3;}
+    .footer {grid-area: footer;}
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header header header'
+        'linkbar linkbar linkbar linkbar'
+        'content_1 content_1 image_1 image_1'
+        'content_2 content_2 image_2 image_2' 
+        'content_3 content_3 image_3 image_3'
+        'footer footer footer footer';
+
+      
+      grid-gap: 5px;
+
+      padding: 5px;
+    }
+
+    .grid-container > div {
+      padding: 15px 0;
+    }
+
+    .linkbar{
+      background-color: palevioletred;
+    }
+
+    .content_1{
+      text-align: justify;
+    }
+
+    .footer{
+      background-color: palevioletred;
+    }
+  </style>
 </head>
 <body>
-<img src="http://www.tup.edu.ph/images/banner-2nd.jpg" alt="tuplogo icon"></br></br>
 
-<a href="1Home.html" target="_blank">Home</a></br>
-<a href="2Login.html" target="_blank">Login</a></br>
-<a href="6Books.html" target="_blank">Book</a></br>
-<a href="8About.html" target="_blank">About</a></br>
-<h1>TUPC LIBRARY MANAGEMENT SYSTEM</h1>
 
-<p>Welcome readers!</p>
+<div class="grid-container">
+  <div class="item1">
+    <img src="http://www.tup.edu.ph/images/banner-2nd.jpg" alt="tuplogo icon">
+  </div>
 
+  <div class="linkbar">
+    <a href="2Login.html">Login</a>
+    <a href="6Books.html">Book</a>
+    <a href="#Steps">Steps</a>
+    <a href="#About">About</a>
+  </div>
+
+  <div class="content_1">
+    <h1>TUPC Library Management System</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class='image_1'>
+    <img src="https://www.capsa.org/wp-content/uploads/2019/07/image-placeholder.jpg">
+  </div>
+
+  <div class="content_2">
+    <h1 id="Steps">Step by Step</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="image_2">
+    <img src="https://www.capsa.org/wp-content/uploads/2019/07/image-placeholder.jpg">
+  </div>
+
+  <div class="content_3">
+    <h1 id="About">About</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="image_3">
+    <img src="https://www.capsa.org/wp-content/uploads/2019/07/image-placeholder.jpg">
+  </div>
+
+  <div class="footer"></div>
+
+
+
+</div>
 
 </body>
 </html>
+
+
