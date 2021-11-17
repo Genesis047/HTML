@@ -1,20 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Login</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    
+    <title>TUPC LIBRARY MANAGEMENT SYSTEM</title>
+    <style type="text/css">
+      img {
+        object-fit: cover;
+      }
+
+      .align-items-center {
+        -ms-flex-align: center!important;
+        align-items: center!important;
+      }
+      
+      .d-flex {
+        display: -ms-flexbox!important;
+        display: flex!important;
+      }
+    </style>
+
+  </head>
+
 <body>
-<img src="http://www.tup.edu.ph/images/banner-2nd.jpg" alt="tuplogo icon"></br></br>
 
-<h1>LIBRARY MANAGEMENT SYSTEM</h1>
+  <div class="container-fluid">
 
-<h2>ADMIN LOGIN</h2>
-<form>
-  <label for="uname">Username:</label>
-  <input type="text" id="uname" name="uname"><br><br>
-  <label for="pname">Password:</label>
-  <input type="password" id="pname" name="pname"><br><br>
-  <input type="button" value="Login" onclick="window.location.href='3Managementbooks.html'"> 
-</form>
+    <div class="row">
+      <div class="col">
+        <img src="http://www.tup.edu.ph/images/banner-2nd.jpg" alt="tuplogo icon">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:  #820000 ;">
+            <a class="navbar-brand" href="#">TUPC Library Management System</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+              <ul class="navbar-nav mr-auto">
+
+              <li class="nav-item active">
+                <a class="nav-link" href="1Home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="6Books.html">Books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#Steps">Steps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#About">About</a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img class="img-fluid" src="https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg">
+        
+      </div>
+
+      <div class="col d-flex align-items-center">
+        <div>
+          <h2>ADMIN LOGIN</h2>
+
+          <form>
+            <div class="form-group">
+
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+              <small id="emailtext" class="form-text text-muted">We'll never share your email to anyone</small>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="check">
+              <label class="form-check-label" for="check">I agree to the Terms and Policies</label>
+            </div>
+
+            <input type="button" class="btn btn-primary" value="Login" onclick="window.location.href='3Managementbooks.html'"></input>
+          </form>
+      </div>
+
+    </div>
+
+
+    
+
+
+
+  </div>
+
 </body>
 </html> 
