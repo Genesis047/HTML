@@ -3,63 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-  <title>TUPC LIBRARY MANAGEMENT SYSTEM</title>
+
+  <title>TUPC Library Management Systems</title>
+
   <style type="text/css">
-    img {
-      object-fit: cover;
+
+    .navbar {
+      background: #820000;
+      font-family: Hack ;
+      padding-top: 60px;
     }
 
-    .container_1 {
-      background: url(https://josecramirez.com/img/placeholder-image.jpg);
+    .display_1{
       margin: 0 !important;
-      height: 76.2vh;
+      min-height: 83.6vh;
+      background-image: url(https://keepitlocalcc.com/wp-content/uploads/2019/11/placeholder.png);
       -webkit-background-size: cover;
       background-size: cover ;
-      background position: center center;
+      background position: center;
       position: relative;
     }
 
-    .navbar{
-      background: #820000;
-    }
-
-    .column_right {
-      background-color: none;
-    }
-
-    .column_left {
-      background-color: none;
-      display: grid;
-      justify-content: center;
-      align-content: center;
-    }
-
-    .form_content {
-      margin: 30px;
-      height: 50vh;
-      padding: 10px;
-      background-color: lightgrey;
-    }
-
   </style>
-
 </head>
 
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  <img src="http://www.tup.edu.ph/images/banner-2nd.jpg" class="image-fluid">
+  <!----Creating Navbar------>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TUPC Library Management System</a>
 
-    <!----Creating Navbar------>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">TUPC Library Management System</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls=
-        "Content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="Content">
@@ -80,17 +59,19 @@
               <a class="nav-link disabled" href="#About">About</a>
             </li>
           </ul>
-        </div>
+    </div>
+  </nav> <!---Navbar code ends here---->
+
+  <!-------Content for this login------>
+  <div class="container-fluid mt-3 display_1">
+    <div class="row">
+      <div class="col-md-6 column_left">
+
       </div>
-    </nav>
 
-    <div class="container-fluid mt-3 container_1">
-      <div class="row">
+      <div class="col-md-6 column_right">
 
-      <div class="col column_right">
-      </div>
-
-      <div class="col column_left">
+        <!-----------Form for Login---------->
         <form class="form_content">
           <div class="form-group">
   `         <label for="email">Email address</label>
@@ -109,11 +90,14 @@
           </div>
           <input type="button" class="btn btn-primary" value="Login" onclick="window.location.href='3Managementbooks.html'"></input>
         </form>
-      </div>
 
+      </div>
     </div>
-  
+  </div>
+
+
+
 
 
 </body>
-</html> 
+</html>
