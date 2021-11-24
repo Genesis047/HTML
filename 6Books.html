@@ -25,9 +25,15 @@
    }
 
 	table, th, td {
+		margin: 0px !important;
 	  border-collapse: collapse;
 	  font-family: 'Inconsolata', monospace;
+	  overflow: hidden;
+	  table-layout: fixed;
+	  text-overflow: ellipsis;
+
 	}
+
 
 	.photo > img {
       object-fit: cover;
@@ -43,7 +49,7 @@
 
   <!----Creating Navbar------>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container-fluid">
+    <div class="container-fluid mt-3">
       <a class="navbar-brand" href="#">TUPC Library Management System</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +78,7 @@
   </nav> <!---Navbar code ends here---->
 
   <!------Add books intro-------->
-  <div class="container-fluid">
+  <div class="container-fluid mt-3">
   	<div class="row">
   		<div class="col">
   			<!--------<h1 style="font-family: 'Inconsolata' monospace;">Available Books List</h1>---->
@@ -81,11 +87,11 @@
   </div>
 
   <!------------Add Books Table--------->
-  <div class="container-fluid">
+  <div class="container-fluid mt-3">
     <div class="row">
       <div class="col">
 
-				<table class="table table-borderless">
+				<table class="table table-borderless" style="width: 100%;">
 					<thead>
 				    <tr>
 				    	<th scope="col">Image</th>
