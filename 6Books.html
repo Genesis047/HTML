@@ -34,12 +34,16 @@
 
 	}
 
-
 	.photo > img {
       object-fit: cover;
       width: 100%;
       height: 100%;
    }
+
+   .modal {
+      font-family: 'Inconsolata', monospace ;
+    }
+
 
 	</style>
 </head>
@@ -49,7 +53,7 @@
 
   <!----Creating Navbar------>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container-fluid mt-3">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">TUPC Library Management System</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,9 +65,6 @@
             <li class="nav-item">
               <a class="nav-link" href="1Home.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="2Login.html">Login</a>
-            </li>
             <li class="nav-item active">
               <a class="nav-link" href="#"><span style="text-decoration: underline;">Books</span></a>
             </li>
@@ -74,6 +75,12 @@
               <a class="nav-link disabled" href="#About">About</a>
             </li>
           </ul>
+
+          <!-----------Login Button------------->
+          <form class="d-flex">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
+          </form>
+        </div>
     </div>
   </nav> <!---Navbar code ends here---->
 
@@ -86,11 +93,18 @@
   	</div>
   </div>
 
+  <!-----------Search bar, etc.--------->
+  <div class="container-fluid mt-3">
+  	<form class="d-flex" style="font-family: 'Inconsolata', monospace;">
+  		<input class="form-control me-2" type="search" placeholder="Search Book Title" aria-label="Search">
+   		<button class="btn btn-primary px-3"><i class="fa fa-search"></i></button>
+  	</form>
+  </div>
+
   <!------------Add Books Table--------->
   <div class="container-fluid mt-3">
     <div class="row">
       <div class="col">
-
 				<table class="table table-borderless" style="width: 100%;">
 					<thead>
 				    <tr>
@@ -148,8 +162,51 @@
 	</div>
 	<!---------Table and Container ends here--------------------------->
 
+  <!------------Modal pop up form----------->
+  <div class="container-fluid">
+    <div class="modal" id=myModal>
 
-		
-  </body>
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Admin Login</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+                <small id="emailtext" class="form-text text-muted">We'll never share your email to anyone</small>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+              </div>
+
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <a href="">Forgot password?</a>
+            <button type="button" class="btn btn-primary" value="Login" onclick="window.location.href='3Managementbooks.html'">Login</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->
+
+
+ </body>
+ </html>
   
 
