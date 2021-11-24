@@ -1,116 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!----------Google font link----------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+  <!------------Icon Library----------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<title>TUPC Library Management System</title>			
+
+	<style>
+
+  .navbar {
+      background: #820000;
+      font-family: 'Inconsolata', monospace;
+      padding-top: 60px;
+   }
+
+	table, th, td {
+	  border-collapse: collapse;
+	  font-family: 'Inconsolata', monospace;
+	}
+
+	.photo > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+
+	</style>
 </head>
-<style>
-table, th, td {
-  border:1px solid black;
-  border-collapse: collapse;
-}
-</style>	
+
 <body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+  <!----Creating Navbar------>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TUPC Library Management System</a>
 
- 	<div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="row">
-      <div class="col">
-        <img src="http://www.tup.edu.ph/images/banner-2nd.jpg" alt="tuplogo icon">
-      </div>
+        <div class="collapse navbar-collapse" id="Content">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="1Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="2Login.html">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><span style="text-decoration: underline;">Books</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#Steps">Steps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#About">About</a>
+            </li>
+          </ul>
     </div>
+  </nav> <!---Navbar code ends here---->
 
-    <div class="row">
-      <div class="col">
-           	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:  #820000 ;">
-            <a class="navbar-brand" href="#">TUPC Library Management System</a>
+  <!------Add books intro-------->
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class="col">
+  			<!--------<h1 style="font-family: 'Inconsolata' monospace;">Available Books List</h1>---->
+  		</div>
+  	</div>
+  </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-	            <ul class="navbar-nav mr-auto">
-
-	            <li class="nav-item active">
-	              <a class="nav-link" href="1Home.html">Home</a>
-	            </li>
-	            <li class="nav-item">
-	              <a class="nav-link" href="2Login.html">Login</a>
-	            </li>
-	            <li class="nav-item">
-	              <a class="nav-link" href="#">Books <span class="sr-only">(current)</span></a>
-	            </li>
-	            <li class="nav-item">
-	              <a class="nav-link disabled" href="#Steps">Steps</a>
-	            </li>
-	            <li class="nav-item">
-	              <a class="nav-link disabled" href="#About">About</a>
-	            </li>
-	           </ul>
-            </div>
-          </nav>
-      </div>
-    </div>
-
+  <!------------Add Books Table--------->
+  <div class="container-fluid">
     <div class="row">
       <div class="col">
 
-				<table style="width:100%">
-			    <tr>
-			    	<th>Image</th>
-				    <th>Book Title</th>
-				    <th>Author</th>
-				    <th>Published Date</th>
-					<th>ISBN</th>
-					<th>Action</th>
-			    </tr>
-			    	<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+				<table class="table table-borderless">
+					<thead>
+				    <tr>
+				    	<th scope="col">Image</th>
+					    <th scope="col">Book Title</th>
+					    <th scope="col">Author</th>
+					    <th scope="col">Published Date</th>
+							<th scope="col">ISBN</th>
+							<th scope="col">Action</th>
+				    </tr>						
+					</thead>
+
+					<tbody>
+						<tr>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Entrepreneurship</td>
-				    <td>Francis Chang</td>
-				    <td>21/01/2001</td>
-					<td>978-3-16-148410-0</td>
-					<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
-			    </tr>
-			    <tr>
-			    	<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+				    	<td>Francis Chang</td>
+				    	<td>21/01/2001</td>
+							<td>978-3-16-148410-0</td>
+							<td><button class="btn btn-primary px-3"><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
+
+			    	<tr>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Physical Education</td>
 			      	<td>Harley Yu</td>
 			      	<td>21/04/2012</td>
-				  	<td>978-3-16-167410-0</td>
-				  	<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
-			    </tr>
-			    <tr>
-			    	<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+				  		<td>978-3-16-167410-0</td>
+				  		<td><button class="btn btn-primary px-3"><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
+			    	
+			    	<tr>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Social Science</td>
 			      	<td>Chris Cruz</td>
 			      	<td>21/01/2002</td>
-				  	<td>978-3-16-160470-0</td>
-				  	<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
-			    </tr>
-			  <tr>
-			  		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image"></td>
+				  		<td>978-3-16-160470-0</td>
+				  		<td><button class="btn btn-primary px-3""><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
+			  		
+			  		<tr>
+			  			<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Political Science</td>
 			      	<td>Anna Feng</td>
 			      	<td>18/04/2003</td>
-				  	<td>978-3-16-169530-0</td>
-				  	<td><button class="btn"><i class="fa fa-trash"></i> Add</button></td>
-			    </tr>
+				  		<td>978-3-16-169530-0</td>
+				  		<td><button class="btn btn-primary px-3""><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
 
+			    </tbody>
 			  </table>
 
 			</div>
-
 		</div>
 	</div>
+	<!---------Table and Container ends here--------------------------->
+
+
 		
   </body>
   
