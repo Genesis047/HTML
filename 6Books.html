@@ -124,7 +124,7 @@
 				    	<td>Francis Chang</td>
 				    	<td>21/01/2001</td>
 							<td>978-3-16-148410-0</td>
-							<td><button class="btn btn-primary px-3"><i class="fa fa-plus"></i> Add</button></td>
+							<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 
 			    	<tr>
@@ -133,7 +133,7 @@
 			      	<td>Harley Yu</td>
 			      	<td>21/04/2012</td>
 				  		<td>978-3-16-167410-0</td>
-				  		<td><button class="btn btn-primary px-3"><i class="fa fa-plus"></i> Add</button></td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow""><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 			    	
 			    	<tr>
@@ -142,7 +142,7 @@
 			      	<td>Chris Cruz</td>
 			      	<td>21/01/2002</td>
 				  		<td>978-3-16-160470-0</td>
-				  		<td><button class="btn btn-primary px-3""><i class="fa fa-plus"></i> Add</button></td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 			  		
 			  		<tr>
@@ -151,7 +151,7 @@
 			      	<td>Anna Feng</td>
 			      	<td>18/04/2003</td>
 				  		<td>978-3-16-169530-0</td>
-				  		<td><button class="btn btn-primary px-3""><i class="fa fa-plus"></i> Add</button></td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 
 			    </tbody>
@@ -164,7 +164,7 @@
 
   <!------------Modal pop up form----------->
   <div class="container-fluid">
-    <div class="modal" id=myModal>
+    <div class="modal fade" id=myModal>
 
       <div class="modal-dialog">
         <div class="modal-content">
@@ -205,6 +205,57 @@
     </div>    
   </div> <!-------------Modal code ends here----->
 
+
+  <!------------Modal pop up borrow form----------->
+  <div class="container-fluid">
+    <div class="modal fade" id=myModalBorrow>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Borrow Request Form</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form>
+
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter First Name">
+              </div>
+
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name">
+              </div>
+
+              <div class="form-group">
+                <label for="id_no">TUPC ID NO.</label>
+                <input type="text" class="form-control" id="id_no" placeholder="TUPC-XX-XXXX">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+              </div>
+
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-primary" value="submit" onclick="">Submit</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->
 
  </body>
  </html>
