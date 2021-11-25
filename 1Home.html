@@ -21,31 +21,47 @@
       padding-top: 60px;
     }
 
-    .display_1{
-      margin: 0 !important;
-      background-image: url(https://keepitlocalcc.com/wp-content/uploads/2019/11/placeholder.png);
-      -webkit-background-size: cover;
-      background-size: cover ;
-      background position: center;
-      position: relative;
-    }
-
-    .column_right {
-      font-family: 'Inconsolata', monospace;
-    }
-
-    .photo > img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-
     .display_2, .display_3 {
       font-family: 'Inconsolata', monospace;
     }
 
     .modal {
       font-family: 'Inconsolata', monospace ;
+    }
+
+    .home {
+      font-family: 'Inconsolata', monospace;
+      display: flex;
+      flex-wrap: wrap;
+      gap:1.5rem;
+      min-height: 84vh;
+      align-items: center;
+      background:url(https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      padding: 1rem;
+    }
+
+    .display_2 .info_steps {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 75vh;
+
+    }
+
+    .photo > img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    .display_3 {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 75vh;
     }
 
   </style>
@@ -92,26 +108,21 @@
 
 
   <!------Contents for the homepage: Intro-->
-  <div class="container-fluid mt-3 display_1">
-    <div class="row">
-      <div class="col-md-6 column_right">
+    <section class="home" id="home">
+      <div class="content">
         <h1>Welcome to TUPC Library</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
       </div>
-    </div>
-  </div>
+    </section>
+
+
 
   <!-------Contents for the Homepage: Steps---->
   <div class="container-fluid mt-3 display_2">
     <div class="row" id="Steps">
       <div class="col-md-12">
         <h1>Simple steps to read books</h1>
-
-      </div>
-    </div>
-
-    <div class="row">
+    <div class="row info_steps">
       <div class="col-md-4 photo">
         <img src="https://www.southsouthfacility.org/sites/ssf/files/stepslogo/step1-feature.jpg" class="img-fluid">
       </div>
@@ -184,9 +195,7 @@
     </div>    
   </div> <!-------------Modal code ends here----->
 
-
   
-      
-
+    
 </body>
 </html>
