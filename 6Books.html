@@ -24,16 +24,18 @@
       padding-top: 60px;
    }
 
-	table, th, td {
+	.table, th, td {
 		margin: 0px !important;
 	  border-collapse: collapse;
 	  font-family: 'Inconsolata', monospace;
-	  overflow: hidden;
-	  table-layout: fixed;
-	  text-overflow: ellipsis;
-
 	}
-
+	
+  .table{
+     display: block !important;
+     overflow-x: auto !important;
+     width: 100% !important;
+   }
+   
 	.photo > img {
       object-fit: cover;
       width: 100%;
