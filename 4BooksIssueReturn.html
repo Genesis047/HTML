@@ -171,7 +171,49 @@
   <option value="paid">paid</option>
   <option value="unpaid">unpaid</option></td>				
 			<td><button class="btn"><i class="bx bx-save"></i> Save</button></td>	
-				
-				
-				
+
+
+<!--------------Modal add form----------------->				
+<div class="container-fluid">
+    <div class="modal fade" id=myModal>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Admin Login</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+                <small id="emailtext" class="form-text text-muted">We'll never share your email to anyone</small>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+              </div>
+
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <a href="">Forgot password?</a>
+            <button type="button" class="btn btn-primary" value="Login" onclick="window.location.href='3Managementbooks.html'">Login</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->	
+</body>				
 </html>
