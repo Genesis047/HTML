@@ -98,6 +98,181 @@
       <a class="btn border-0" id="menu-btn">
         <i class="bx bx-menu"></i></a>
   </div>
+    </div>
+  </nav> <!---Navbar code ends here---->
+
+  <!------Add books intro-------->
+  <div class="container-fluid mt-3">
+  	<div class="row">
+  		<div class="col">
+  			<!--------<h1 style="font-family: 'Inconsolata' monospace;">Available Books List</h1>---->
+  		</div>
+  	</div>
+  </div>
+
+  <!-----------Search bar, etc.--------->
+  <div class="container-fluid mt-3">
+  	<form class="d-flex" style="font-family: 'Inconsolata', monospace;">
+  		<input class="form-control me-2" type="search" placeholder="Search Book Title" aria-label="Search">
+   		<button class="btn btn-primary px-3"><i class="fa fa-search"></i></button>
+  	</form>
+  </div>
+
+  <!------------Add Books Table--------->
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col">
+				<table class="table table-hover"  style="width: 100%;">
+					<thead>
+				    <tr>
+				    	<th scope="col">Image</th>
+					    <th scope="col">Book Title</th>
+					    <th scope="col">Author</th>
+					    <th scope="col">Published Date</th>
+							<th scope="col">ISBN</th>
+							<th scope="col">Action</th>
+				    </tr>						
+					</thead>
+
+					<tbody>
+						<tr>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+			      	<td>Entrepreneurship</td>
+				    	<td>Francis Chang</td>
+				    	<td>21/01/2001</td>
+							<td>978-3-16-148410-0</td>
+							<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
+
+			    	<tr>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+			      	<td>Physical Education</td>
+			      	<td>Harley Yu</td>
+			      	<td>21/04/2012</td>
+				  		<td>978-3-16-167410-0</td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow""><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
+			    	
+			    	<tr>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+			      	<td>Social Science</td>
+			      	<td>Chris Cruz</td>
+			      	<td>21/01/2002</td>
+				  		<td>978-3-16-160470-0</td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
+			  		
+			  		<tr>
+			  			<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+			      	<td>Political Science</td>
+			      	<td>Anna Feng</td>
+			      	<td>18/04/2003</td>
+				  		<td>978-3-16-169530-0</td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
+			    	</tr>
+
+			    </tbody>
+			  </table>
+
+			</div>
+		</div>
+	</div>
+	<!---------Table and Container ends here--------------------------->
+
+  <!------------Modal pop up form----------->
+  <div class="container-fluid">
+    <div class="modal fade" id=myModal>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Admin Login</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+                <small id="emailtext" class="form-text text-muted">We'll never share your email to anyone</small>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+              </div>
+
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <a href="">Forgot password?</a>
+            <button type="button" class="btn btn-primary" value="Login" onclick="window.location.href='3Managementbooks.html'">Login</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->
+
+
+  <!------------Modal pop up borrow form----------->
+  <div class="container-fluid">
+    <div class="modal fade" id=myModalBorrow>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Borrow Request Form</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form>
+
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter First Name">
+              </div>
+
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name">
+              </div>
+
+              <div class="form-group">
+                <label for="id_no">TUPC ID NO.</label>
+                <input type="text" class="form-control" id="id_no" placeholder="TUPC-XX-XXXX">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+              </div>
+
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-primary" value="submit" onclick="">Submit</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->
 
   <script type="text/javascript">
     var menu_btn = document.querySelector("#menu-btn");
