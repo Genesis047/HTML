@@ -45,7 +45,8 @@
       padding: 1rem;
     }
 
-    .display_2 .info_steps {
+    .info_steps {
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
       min-height: 75vh;
@@ -59,9 +60,16 @@
     }
 
     .display_3 {
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
       min-height: 75vh;
+    }
+
+    @media screen and (max-width: 720px) {
+    .navbar {
+    padding-top: 10px !important;
+      }
     }
 
   </style>
@@ -119,22 +127,23 @@
 
   <!-------Contents for the Homepage: Steps---->
   <div class="container-fluid mt-3 display_2">
-    <div class="row" id="Steps">
-      <div class="col-md-12">
-        <h1>Simple steps to read books</h1>
-    <div class="row info_steps">
+    <div>
+      <h1 id="Steps">Simple steps to read books</h1>    
+    </div>
+
+    <div class="row info_steps"> 
       <div class="col-md-4 photo">
-        <img src="https://www.southsouthfacility.org/sites/ssf/files/stepslogo/step1-feature.jpg" class="img-fluid">
+        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
       </div>
+
       <div class="col-md-4 photo">
-        <img src="https://www.southsouthfacility.org/sites/ssf/files/stepslogo/step2-feature.jpg" class="img-fluid">
+        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
       </div>
+
       <div class="col-md-4 photo">
-        <img src="https://www.southsouthfacility.org/sites/ssf/files/stepslogo/step3-feature.jpg" class="img-fluid">
+        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
       </div>
     </div>   
-  </div>
-</div>
 
 
   <!-------About--------------------------->
@@ -145,7 +154,7 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div class="col-md-6 photo">
-        <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-landscape.png" class="img-fluid">
+        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
       </div>
 
     </div>
