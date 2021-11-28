@@ -21,21 +21,15 @@
   .navbar {
       background: #820000;
       font-family: 'Inconsolata', monospace;
-      padding-top: 60px;
+      padding-top: 30px;
    }
 
-	.table, th, td {
+	table, th, td {
 		margin: 0px !important;
 	  border-collapse: collapse;
 	  font-family: 'Inconsolata', monospace;
 	}
-	
-  .table{
-     display: block !important;
-     overflow-x: auto !important;
-     width: 100% !important;
-   }
-   
+
 	.photo > img {
       object-fit: cover;
       width: 100%;
@@ -48,8 +42,14 @@
 
   @media screen and (max-width: 720px) {
     .navbar {
-    padding-top: 10px !important;
-    }
+    	padding-top: 10px !important;
+     }
+
+    .table{
+			display: block;
+   		overflow-x: auto !important;
+   		width: 100% !important;
+ 		}
   }
 
 
