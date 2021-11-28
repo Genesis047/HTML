@@ -21,86 +21,12 @@
 
   <style>
 
-    .side-navbar {
-      width: 200px;
-      height: 100%;
-      position: fixed;
-      margin-left: -300px;
-      background-color: #100901;
-      transition: 0.5s;
-    }
-
-  .nav-link:active,
-  .nav-link:focus,
-  .nav-link:hover {
-    background-color: #ffffff26;
-  }
-
-  .my-container {
-    transition: 0.4s;
-  }
-
-  .active-nav {
-    margin-left: 0;
-  }
-
-  /* for main section */
-  .active-cont {
-    margin-left: 180px;
-  }
-
-  .nav-link {
-    text-decoration: none;
-  }
-
-  #menu-btn {
-    background-color: #100901;
-    color: #fff;
-    margin-left: -62px;
-  }
-
-  @media screen and (max-width: 720px) {
-    .side-navbar {
-      width: 180px;
-        }
-  }
-
   </style>
 
 </head>
 <body>
-  <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
-    <ul class="nav flex-column text-white w-100">
-      <a href="#" class="nav-link h3 text-white my-2">
-        Side Nav
-      </a>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Manage Books</a>
-        <span class="mx-2"></span>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="4BooksIssueReturn.html">Books Issue</a>
-        <span class="mx-2"></span>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="5Studentrequest.html">Student Request</a>
-        <span class="mx-2"></span>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="1Home.html">Log out</a>
-        <span class="mx-2"></span>
-      </li>
-    </ul>
-  </div>
 
-  <div class="p-1 my-container active-cont">
-    Toggle Icon
-      <a class="btn border-0" id="menu-btn">
-        <i class="bx bx-menu"></i></a>
-  </div>
-    </div>
-  </nav> <!---Navbar code ends here---->
-
+  <!------Add books intro-------->
   <div class="container-fluid mt-3">
   	<div class="row">
   		<div class="col">
@@ -129,40 +55,45 @@
 					    <th scope="col">Author</th>
 					    <th scope="col">Published Date</th>
 							<th scope="col">ISBN</th>
+							<th scope="col">Action</th>
 				    </tr>						
 					</thead>
 
 					<tbody>
 						<tr>
-			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTksu2v67Y4Hp478CggHBhuJyN_nCfb7i0-mA&usqp=CAU" height="200" width="200" halt="No image" class="img-fluid"></td>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Entrepreneurship</td>
 				    	<td>Francis Chang</td>
 				    	<td>21/01/2001</td>
 							<td>978-3-16-148410-0</td>
+							<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 
 			    	<tr>
-			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgXLo2sywCEQMsA8hqxnVvn2LUCUKGdIaJUQ&usqp=CAU" height="200" width="200" alt="No image" class="img-fluid"></td>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Physical Education</td>
 			      	<td>Harley Yu</td>
 			      	<td>21/04/2012</td>
 				  		<td>978-3-16-167410-0</td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow""><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 			    	
 			    	<tr>
-			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnwD70BxEUlrG_TZJlf_bm8lGafDCXGdLBxA&usqp=CAU" height="200" width="200" alt="No image" class="img-fluid"></td>
+			    		<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Social Science</td>
 			      	<td>Chris Cruz</td>
 			      	<td>21/01/2002</td>
 				  		<td>978-3-16-160470-0</td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 			  		
 			  		<tr>
-			  			<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwHeqWMAu9Pb4yVpegejY1vR-dIEu1VzxaCQ&usqp=CAU" height="200" width="200" alt="No image" class="img-fluid"></td>
+			  			<td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
 			      	<td>Political Science</td>
 			      	<td>Anna Feng</td>
 			      	<td>18/04/2003</td>
 				  		<td>978-3-16-169530-0</td>
+				  		<td><button class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="fa fa-plus"></i> Add</button></td>
 			    	</tr>
 
 			    </tbody>
@@ -192,7 +123,7 @@
 
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email:">
+                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
                 <small id="emailtext" class="form-text text-muted">We'll never share your email to anyone</small>
               </div>
 
