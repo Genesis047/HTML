@@ -41,8 +41,38 @@
       background-position: center;
     }
 
-    .content {
-      padding: 1rem;
+    .home .content{
+      flex: 1 1 40rem;
+      padding-top: 3rem;
+      padding: 1.5rem;
+    }
+
+    .home .image_content{
+      flex: 1 1 30rem;
+    }
+
+    .home .image_content img{
+      width: 100%;
+      padding: 2.5rem;
+      animation:float 3.5s linear infinite;
+    }
+
+    @keyframes float{
+      0%, 100%{
+        transform: translateY(0rem);
+      }
+      50%{
+        transform: translateY(3rem);
+      }
+    }
+
+    .home .content h3 {
+      font-size: 2.6rem;
+      color: black;
+    }
+
+    .home .content p {
+      font-size: 1.5rem;
     }
 
     .photo > img {
@@ -50,18 +80,6 @@
       width: 100%;
       height: 100%;
       justify-content: center;
-    }
-
-    .step_content {
-      padding-top: 4rem;
-      font-family: 'Inconsolata', monospace;
-    }
-
-    .display_3 {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 75vh;
     }
     
     .img-responsive {
@@ -74,11 +92,25 @@
       justify-content: center;
     }
 
+    .step_content {
+      padding-top: 4rem;
+      font-family: 'Inconsolata', monospace;
+    }
+
+
+    .display_3 {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 75vh;
+    }
+
     @media screen and (max-width: 720px) {
       .navbar {
       padding-top: 10px !important;
       }
     }
+
 
   </style>
 </head>
@@ -107,7 +139,7 @@
               <a class="nav-link" href="6Books.html">Books</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Steps">Steps</a>
+              <a class="nav-link" href="#step">Steps</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#About">About</a>
@@ -126,8 +158,11 @@
   <!------Contents for the homepage: Intro-->
     <section class="home" id="home">
       <div class="content">
-        <h1>Welcome to TUPC Library</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <h3>Welcome to TUPC Library System</h3>
+        <p><i>Outreach. Evolving. Innovative.</i></p>
+      </div>
+      <div class="image_content">
+        <img src="images/undraw_mathematics_-4-otb.svg">
       </div>
     </section>
 
@@ -175,11 +210,11 @@
   <div class="container-fluid mt-3 display_3">
     <div class="row">
       <div class="col-md-6">
-        <h1 id="About">About</h1>
+        <h1 id="About">About Us</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div class="col-md-6 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
+        <img src="images/undraw_collaborators_re_hont.svg" class="img-fluid">
       </div>
 
     </div>
