@@ -21,7 +21,7 @@
       padding-top: 30px;
     }
 
-    .display_2, .display_3 {
+    .display_3 {
       font-family: 'Inconsolata', monospace;
     }
 
@@ -36,7 +36,7 @@
       gap:1.5rem;
       min-height: 91vh;
       align-items: center;
-      background:url(https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png) no-repeat;
+      background:url(images/undraw_books_l-33-t.svg) no-repeat;
       background-size: cover;
       background-position: center;
     }
@@ -45,18 +45,16 @@
       padding: 1rem;
     }
 
-    .info_steps {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 75vh;
-
-    }
-
     .photo > img {
       object-fit: contain;
       width: 100%;
       height: 100%;
+      justify-content: center;
+    }
+
+    .step_content {
+      padding-top: 4rem;
+      font-family: 'Inconsolata', monospace;
     }
 
     .display_3 {
@@ -65,10 +63,20 @@
       flex-wrap: wrap;
       min-height: 75vh;
     }
+    
+    .img-responsive {
+      width: auto;
+      height: 300px;
+      display: inline-block;
+    }
+
+    .step {
+      justify-content: center;
+    }
 
     @media screen and (max-width: 720px) {
-    .navbar {
-    padding-top: 10px !important;
+      .navbar {
+      padding-top: 10px !important;
       }
     }
 
@@ -123,27 +131,44 @@
       </div>
     </section>
 
+    <!-- Step Section -->
+    <section id="step">
+        <div class="container-fluid step_content">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="section-title">
+                        <h2 class="text-center">How it works?</h2>
+                        <p class="text-center"><i>“A reader lives a thousand lives before he dies..."</i></p>
+                    </div>
+                    <hr class="border-white mb-4 mt-4">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_file_searching_re_3evy.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>1. Search a book</h3>
+                    </figure>
+                </div>
 
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_add_files_re_v09g.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>2. Submit a request form </h3>
+                    </figure>
+                </div>
 
-  <!-------Contents for the Homepage: Steps---->
-  <div class="container-fluid mt-3 display_2">
-    <div>
-      <h1 id="Steps">Simple steps to read books</h1>    
-    </div>
-
-    <div class="row info_steps"> 
-      <div class="col-md-4 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
-      </div>
-
-      <div class="col-md-4 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
-      </div>
-
-      <div class="col-md-4 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
-      </div>
-    </div>   
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_pull_request_gld8.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>3. Wait for the confirmation</h3>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Workflow Section -->
 
 
   <!-------About--------------------------->
