@@ -90,88 +90,93 @@
       <div class="row">
           <div class="col min-vh-100 p-4">
 
-            <!------Heading--------->
-            <div class="row">
-              <div class="col">
-                <!-- toggler -->
-                <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+            <!-----------Nvbar------------------------------->
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Manage Books</a>
+              </div>
+
+              <form class="d-flex">
+                <!--------Adding books button------->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+                  <i class="fs-2 bi-plus-square"></i>
+                </button>
+
+                <!----------Sidebar toggle icon------------->
+                <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
                   <i class="fs-2 bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
                 </button>
+              </form>
+            </nav>
+
+            <div class="container-fluid mt-3">
+              <!-----------Search bar, etc.--------->
+              <form class="d-flex" style="font-family: 'Inconsolata', monospace;">
+                <input class="form-control me-2" type="search" placeholder="Search Book Title" aria-label="Search">
+              </form>
+
+
+              <!------------Add Books Table--------->
+              <div class="row">
+                <div class="col">
+                  <table class="table table-hover"  style="width: 100%;">
+                    <thead>
+                      <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Book Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Published Date</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">Action</th>
+                      </tr>           
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+                        <td>Entrepreneurship</td>
+                        <td>Francis Chang</td>
+                        <td>21/01/2001</td>
+                        <td>978-3-16-148410-0</td>
+                        <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i>Remove</button></td>
+                      </tr>
+
+                      <tr>
+                        <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+                        <td>Physical Education</td>
+                        <td>Harley Yu</td>
+                        <td>21/04/2012</td>
+                        <td>978-3-16-167410-0</td>
+                        <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow""><i class="bi bi-trash"></i>Remove</button></td>
+                      </tr>
+                      
+                      <tr>
+                        <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+                        <td>Social Science</td>
+                        <td>Chris Cruz</td>
+                        <td>21/01/2002</td>
+                        <td>978-3-16-160470-0</td>
+                        <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i>Remove</button></td>
+                      </tr>
+                      
+                      <tr>
+                        <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
+                        <td>Political Science</td>
+                        <td>Anna Feng</td>
+                        <td>18/04/2003</td>
+                        <td>978-3-16-169530-0</td>
+                        <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i>Remove</button></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                </div>
               </div>
-            </div>
+              <!---------Table and Container ends here--------------------------->
 
-            <!-------------Content------------>
-            <h2>MANAGE BOOKS</h2>
-
+            </div> <!----------Main content fluid-------->
             
-            <!-----------Search bar, etc.--------->
-            <form class="d-flex" style="font-family: 'Inconsolata', monospace;">
-              <input class="form-control me-2" type="search" placeholder="Search Book Title" aria-label="Search">
-              <button class="btn btn-primary px-3"><i class="bi bi-search"></i></button>
-
-              <button type="button" class="btn btn-primary px-3" data-bs-toggle="modal" data-bs-target="#myModal">
-                <i class="bi bi-plus-square"></i></button>
-            </form>
-
-
-            <!------------Add Books Table--------->
-            <div class="row">
-              <div class="col">
-                <table class="table table-hover"  style="width: 100%;">
-                  <thead>
-                    <tr>
-                      <th scope="col">Image</th>
-                      <th scope="col">Book Title</th>
-                      <th scope="col">Author</th>
-                      <th scope="col">Published Date</th>
-                      <th scope="col">ISBN</th>
-                      <th scope="col">Action</th>
-                    </tr>           
-                  </thead>
-
-                  <tbody>
-                    <tr>
-                      <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Entrepreneurship</td>
-                      <td>Francis Chang</td>
-                      <td>21/01/2001</td>
-                      <td>978-3-16-148410-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i>Remove</button></td>
-                    </tr>
-
-                    <tr>
-                      <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Physical Education</td>
-                      <td>Harley Yu</td>
-                      <td>21/04/2012</td>
-                      <td>978-3-16-167410-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow""><i class="bi bi-trash"></i>Remove</button></td>
-                    </tr>
-                    
-                    <tr>
-                      <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Social Science</td>
-                      <td>Chris Cruz</td>
-                      <td>21/01/2002</td>
-                      <td>978-3-16-160470-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i>Remove</button></td>
-                    </tr>
-                    
-                    <tr>
-                      <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Political Science</td>
-                      <td>Anna Feng</td>
-                      <td>18/04/2003</td>
-                      <td>978-3-16-169530-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i>Remove</button></td>
-                    </tr>
-
-                  </tbody>
-                </table>
-
-              </div>
-            </div>
-            <!---------Table and Container ends here--------------------------->
 
 
           </div> <!------------row ending of class content---------->
