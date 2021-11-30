@@ -36,15 +36,14 @@
       gap:1.5rem;
       min-height: 91vh;
       align-items: center;
-      background:url(images/undraw_books_l-33-t.svg) no-repeat;
+      background:url() no-repeat;
       background-size: cover;
       background-position: center;
     }
 
     .home .content{
       flex: 1 1 40rem;
-      padding-top: 3rem;
-      padding: 1.5rem;
+      padding: 5rem;
     }
 
     .home .image_content{
@@ -69,10 +68,15 @@
     .home .content h3 {
       font-size: 2.6rem;
       color: black;
+      font-weight: bold;
+    }
+
+    .home .content h5 {
+      color: grey;
     }
 
     .home .content p {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
     .photo > img {
@@ -97,12 +101,20 @@
       font-family: 'Inconsolata', monospace;
     }
 
+    .step_content h2 {
+      font-weight: bold;
+    }
+
 
     .display_3 {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
       min-height: 75vh;
+    }
+
+    .display_3 h1 {
+      font-weight: bold;
     }
 
     @media screen and (max-width: 720px) {
@@ -158,7 +170,8 @@
   <!------Contents for the homepage: Intro-->
     <section class="home" id="home">
       <div class="content">
-        <h3>Welcome to TUPC Library System</h3>
+        <h5>Read in easy ways</5>
+        <h3>A simple Library System</h3>
         <p><i>Outreach. Evolving. Innovative.</i></p>
       </div>
       <div class="image_content">

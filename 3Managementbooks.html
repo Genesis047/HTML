@@ -33,6 +33,10 @@
       font-family: 'Inconsolata', monospace ;
     }
 
+    .table_page {
+      padding-top: 2rem;
+    }
+
     @media screen and (max-width: 720px) {
     .table{
       display: block;
@@ -96,28 +100,25 @@
           <div class="col min-vh-100 p-4">
 
             <div class="row">
-              <div class="col">
-                <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-                  <i class="fs-2 bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
-                </button>
-              </div>
-            </div>
 
-            <div class="row">
               <div class="col">
                 <h1>MANAGE BOOKS</h1>
               </div>
+
+              <div class="col">
+                <button class="btn float-end has-tooltip" title="Sidebar" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                  <i class="fs-2 bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+                </button>
+                <button type="button" class="btn float-end has-tooltip" title="Add Book" data-bs-toggle="modal" data-bs-target="#myModal">
+                  <i class="fs-2 bi bi-journal-plus"></i>
+                </button>
+              </div>
+
             </div>
 
-            <div class="row">
+            <!-------------Table------------------->
+            <div class="row table_page">
               <div class="col">
-                <!-----------Search bar, etc.--------->
-                <form class="d-flex" style="font-family: 'Inconsolata', monospace;">
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                    <i class="bi-plus-square"></i>
-                  </button>
-                </form>
-
                 <table id="manage_table" class="table table-hover"  style="width: 100%;">
                   <thead>
                     <tr>
@@ -243,9 +244,8 @@
     $('#manage_table').DataTable();
     } );
   </script>
-  
+
   <!-------------Bootstrap js--------------------->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 </html> 
