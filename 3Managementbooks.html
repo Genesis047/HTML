@@ -19,6 +19,11 @@
   <!-------------Data Table---------------->
   <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+  
+  <!------------Ajax table select----------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <script type="text/javascript" src="javascript/manage.js"></script>
 
   <title>TUPC Library Management Systems</title>
 
@@ -47,12 +52,7 @@
   }
 
   </style>
-  <!---------------------Tooltip---------------------->
-  <script>
-    $(document).ready(function(){
-        $('[data-bs-toggle="tooltip"]').tooltip();   
-    });
-  </script>
+
 
 </head>
 <body>
@@ -134,37 +134,37 @@
                   <tbody>
                     <tr>
                       <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Entrepreneurship</td>
-                      <td>Francis Chang</td>
-                      <td>21/01/2001</td>
-                      <td>978-3-16-148410-0</td>
+                      <td class="book_title">Entrepreneurship</td>
+                      <td class="book_author">Francis Chang</td>
+                      <td class="pub_date">21/01/2001</td>
+                      <td class="book_isbn">978-3-16-148410-0</td>
                       <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i></button></td>
                     </tr>
 
                     <tr>
                       <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Physical Education</td>
-                      <td>Harley Yu</td>
-                      <td>21/04/2012</td>
-                      <td>978-3-16-167410-0</td>
+                      <td class="book_title">Physical Education</td>
+                      <td class="book_author">Harley Yu</td>
+                      <td class="pub_date">21/04/2012</td>
+                      <td class="book_isbn">978-3-16-167410-0</td>
                       <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow""><i class="bi bi-trash"></i></button></td>
                     </tr>
                     
                     <tr>
                       <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Social Science</td>
-                      <td>Chris Cruz</td>
-                      <td>21/01/2002</td>
-                      <td>978-3-16-160470-0</td>
+                      <td class="book_title">Social Science</td>
+                      <td class="book_author">Chris Cruz</td>
+                      <td class="pub_date">21/01/2002</td>
+                      <td class="book_isbn">978-3-16-160470-0</td>
                       <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i></button></td>
                     </tr>
                     
                     <tr>
                       <td><img src="https://static.thenounproject.com/png/3674270-200.png"alt="No image" class="img-fluid"></td>
-                      <td>Political Science</td>
-                      <td>Anna Feng</td>
-                      <td>18/04/2003</td>
-                      <td>978-3-16-169530-0</td>
+                      <td class="book_title">Political Science</td>
+                      <td class="book_author">Anna Feng</td>
+                      <td class="pub_date">18/04/2003</td>
+                      <td class="book_isbn">978-3-16-169530-0</td>
                       <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i></button></td>
                     </tr>
 
@@ -244,6 +244,8 @@
     $('#manage_table').DataTable();
     } );
   </script>
+
+  <!------------Get Table cell Td---------->
 
   <!-------------Bootstrap js--------------------->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
