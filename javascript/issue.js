@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    $('#manage_table').DataTable();
+    $('#issue_table').DataTable();
 });
 
 $(document).ready(function(){
-   $("#manage_table").on('click','.btn',function(){
+   $("#issue_table").on('click','.btn',function(){
            // get the current row
            var currentRow=$(this).closest("tr"); 
            
