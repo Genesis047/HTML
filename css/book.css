@@ -5,7 +5,8 @@
  }
 
 table, th, td {
-
+	margin: 0px !important;
+	 border-collapse: collapse;
   font-family: 'Inconsolata', monospace;
 }
 
