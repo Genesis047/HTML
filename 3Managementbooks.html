@@ -140,7 +140,7 @@
                       <td class="book_author">Francis Chang</td>
                       <td class="pub_date">21/01/2001</td>
                       <td class="book_isbn">978-3-16-148410-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i></button></td>
+                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModal_2"><i class="bi bi-trash"></i></button></td>
                     </tr>
 
                     <tr>
@@ -149,7 +149,7 @@
                       <td class="book_author">Harley Yu</td>
                       <td class="pub_date">21/04/2012</td>
                       <td class="book_isbn">978-3-16-167410-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow""><i class="bi bi-trash"></i></button></td>
+                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModal_2"><i class="bi bi-trash"></i></button></td>
                     </tr>
                     
                     <tr>
@@ -158,7 +158,7 @@
                       <td class="book_author">Chris Cruz</td>
                       <td class="pub_date">21/01/2002</td>
                       <td class="book_isbn">978-3-16-160470-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i></button></td>
+                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModal_2"><i class="bi bi-trash"></i></button></td>
                     </tr>
                     
                     <tr>
@@ -167,7 +167,7 @@
                       <td class="book_author">Anna Feng</td>
                       <td class="pub_date">18/04/2003</td>
                       <td class="book_isbn">978-3-16-169530-0</td>
-                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModalBorrow"><i class="bi bi-trash"></i></button></td>
+                      <td><button class="btn btn-warning px-3" data-bs-toggle="modal" data-bs-target="#myModal_2"><i class="bi bi-trash"></i></button></td>
                     </tr>
 
                   </tbody>
@@ -183,7 +183,7 @@
 
   <!------------Modal pop up form----------->
     <div class="container-fluid">
-      <div class="modal fade" id=myModal>
+      <div class="modal fade" id="myModal">
 
         <div class="modal-dialog">
           <div class="modal-content">
@@ -214,7 +214,6 @@
                 
                 <div class="form-group">
                   <label for="start">Published Date</label>
-              
                   <input type="date" class="form-control" id="start" name="trip-start"
                      value="2000-01-01"
                      min="1980-01-01" max="2021-12-31">
@@ -240,7 +239,53 @@
     </div> <!-------------Modal code ends here----->
 
 
-  <!------------Get Table cell Td---------->
+  <!------------Modal pop up removal----------->
+    <div class="container-fluid">
+      <div class="modal fade" id="myModal_2">
+
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!--------Modal Header------>
+            <div class="modal-header border-0">
+              <h2 class="modal-title">Book Details Summary</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!---------Modal Body------------>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="mtitle">Book Title</label>
+                <input type="text" class="form-control mbook_title" id="mtitle" onkeypress="return isNumber(event)" name="mtitle" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="mauthor">Author</label>
+                <input type="text" class="form-control mbook_author" id="mauthor" onkeypress="return isNumber(event)" name="mauthor" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="mpubdate">Published Date</label>
+                <input type="text" class="form-control mpub_date" id="mpubdate" onkeypress="return isNumber(event)" name="mpubdate" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="misbn">ISBN</label>
+                <input type="text" class="form-control mbook_isbn" id="misbn" onkeypress="return isNumber(event)" name="misbn" disabled>
+              </div>
+            </div>
+
+            <!---------Modal Footer------------>
+            <div class="modal-footer border-0">
+              <input class="btn btn-warning" type="submit" value="Cancel">
+              <input class="btn btn-success" type="submit" value="Remove">
+            </div>
+
+          </div>
+        </div>
+
+      </div>    
+    </div> <!-------------Modal code ends here----->
 
   <!-------------Bootstrap js--------------------->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
