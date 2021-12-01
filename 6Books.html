@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!----------Google font link----------->
@@ -11,47 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
+  <!--------------Box icon link----------------->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
   <!------------Icon Library----------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<title>TUPC Library Management System</title>			
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-------------Data Table---------------->
+  <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script> 
+
+	<script type="text/javascript" src="javascript/book.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/book.css">
 
 	<style>
-
-  .navbar {
-      background: #820000;
-      font-family: 'Inconsolata', monospace;
-      padding-top: 30px;
-   }
-
-	table, th, td {
-		margin: 0px !important;
-	  border-collapse: collapse;
-	  font-family: 'Inconsolata', monospace;
-	}
-
-	.photo > img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-  }
-
-   .modal {
-      font-family: 'Inconsolata', monospace ;
-  }
-
-  @media screen and (max-width: 720px) {
-    .navbar {
-    	padding-top: 10px !important;
-     }
-
-    .table{
-			display: block;
-   		overflow-x: auto !important;
-   		width: 100% !important;
- 		}
-
-  }
 
 
 	</style>
@@ -101,18 +77,11 @@
   	</div>
   </div>
 
-  <!-----------Search bar, etc.--------->
-  <div class="container-fluid mt-3">
-  	<form style="font-family: 'Inconsolata', monospace;">
-  		<input class="form-control me-2" type="search" placeholder="Search Book Title" aria-label="Search">
-  	</form>
-  </div>
-
   <!------------Add Books Table--------->
   <div class="container-fluid mt-3">
     <div class="row">
       <div class="col">
-				<table class="table table-hover"  style="width: 100%;">
+				<table id="book_table" class="table table-borderless"  style="width: 100%;">
 					<thead>
 				    <tr>
 				    	<th scope="col">Image</th>
@@ -126,7 +95,7 @@
 
 					<tbody>
 						<tr>
-			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTksu2v67Y4Hp478CggHBhuJyN_nCfb7i0-mA&usqp=CAU" height="200" width="200" halt="No image" class="img-fluid"></td>
+			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTksu2v67Y4Hp478CggHBhuJyN_nCfb7i0-mA&usqp=CAU" halt="No image" class="img-fluid"></td>
 			      	<td>Entrepreneurship</td>
 				    	<td>Francis Chang</td>
 				    	<td>21/01/2001</td>
@@ -135,7 +104,7 @@
 			    	</tr>
 
 			    	<tr>
-			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgXLo2sywCEQMsA8hqxnVvn2LUCUKGdIaJUQ&usqp=CAU" height="200" width="200" alt="No image" class="img-fluid"></td>
+			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgXLo2sywCEQMsA8hqxnVvn2LUCUKGdIaJUQ&usqp=CAU" alt="No image" class="img-fluid"></td>
 			      	<td>Physical Education</td>
 			      	<td>Harley Yu</td>
 			      	<td>21/04/2012</td>
@@ -144,7 +113,7 @@
 			    	</tr>
 			    	
 			    	<tr>
-			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnwD70BxEUlrG_TZJlf_bm8lGafDCXGdLBxA&usqp=CAU" height="200" width="200" alt="No image" class="img-fluid"></td>
+			    		<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnwD70BxEUlrG_TZJlf_bm8lGafDCXGdLBxA&usqp=CAU" alt="No image" class="img-fluid"></td>
 			      	<td>Social Science</td>
 			      	<td>Chris Cruz</td>
 			      	<td>21/01/2002</td>
@@ -153,7 +122,7 @@
 			    	</tr>
 			  		
 			  		<tr>
-			  			<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwHeqWMAu9Pb4yVpegejY1vR-dIEu1VzxaCQ&usqp=CAU" height="200" width="200" alt="No image" class="img-fluid"></td>
+			  			<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwHeqWMAu9Pb4yVpegejY1vR-dIEu1VzxaCQ&usqp=CAU" alt="No image" class="img-fluid"></td>
 			      	<td>Political Science</td>
 			      	<td>Anna Feng</td>
 			      	<td>18/04/2003</td>
@@ -316,7 +285,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
- </body>
- </html>
+</body>
+</html>
   
 
