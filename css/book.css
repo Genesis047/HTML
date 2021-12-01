@@ -24,13 +24,6 @@ img{
   .navbar {
   	padding-top: 10px !important;
    }
-
-  .table{
-		display: block;
- 		overflow-x: auto !important;
- 		width: 100% !important;
-		}
-
 }
 
 thead, tfoot {
@@ -47,7 +40,7 @@ tr {
    padding: 1rem 0.5rem 1rem 0.5rem;
    margin: 1.5rem;
    border: 1px solid grey;
-   border-radius 10px;
+   border-radius: 10px;
    box-shadow: 0 0 10px;
  }
 
