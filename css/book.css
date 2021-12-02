@@ -1,0 +1,34 @@
+.navbar {
+    background: #820000;
+    font-family: 'Inconsolata', monospace;
+    padding-top: 30px;
+ }
+
+table, th, td {
+	margin: 0px !important;
+	 border-collapse: collapse;
+  font-family: 'Inconsolata', monospace;
+}
+
+img{ 
+  display: block; 
+  margin: 0vw; 
+  width: 10vw; !important; 
+  height: 10vw !important;
+}
+
+ .modal {
+    font-family: 'Inconsolata', monospace ;
+}
+
+@media screen and (max-width: 720px) {
+  .navbar {
+  	padding-top: 10px !important;
+   }
+
+  .table{
+    display: block;
+    overflow-x: auto !important;
+    width: 100% !important;
+  }
+}

@@ -21,7 +21,7 @@
       padding-top: 30px;
     }
 
-    .display_2, .display_3 {
+    .display_3 {
       font-family: 'Inconsolata', monospace;
     }
 
@@ -36,28 +36,75 @@
       gap:1.5rem;
       min-height: 91vh;
       align-items: center;
-      background:url(https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png) no-repeat;
+      background:url() no-repeat;
       background-size: cover;
       background-position: center;
     }
 
-    .content {
-      padding: 1rem;
+    .home .content{
+      flex: 1 1 40rem;
+      padding: 5rem;
     }
 
-    .info_steps {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 75vh;
+    .home .image_content{
+      flex: 1 1 30rem;
+    }
 
+    .home .image_content img{
+      width: 100%;
+      padding: 2.5rem;
+      animation:float 3.5s linear infinite;
+    }
+
+    @keyframes float{
+      0%, 100%{
+        transform: translateY(0rem);
+      }
+      50%{
+        transform: translateY(3rem);
+      }
+    }
+
+    .home .content h3 {
+      font-size: 2.6rem;
+      color: black;
+      font-weight: bold;
+    }
+
+    .home .content h5 {
+      color: grey;
+    }
+
+    .home .content p {
+      font-size: 1.3rem;
     }
 
     .photo > img {
       object-fit: contain;
       width: 100%;
       height: 100%;
+      justify-content: center;
     }
+    
+    .img-responsive {
+      width: auto;
+      height: 300px;
+      display: inline-block;
+    }
+
+    .step {
+      justify-content: center;
+    }
+
+    .step_content {
+      padding-top: 4rem;
+      font-family: 'Inconsolata', monospace;
+    }
+
+    .step_content h2 {
+      font-weight: bold;
+    }
+
 
     .display_3 {
       align-items: center;
@@ -66,11 +113,16 @@
       min-height: 75vh;
     }
 
+    .display_3 h1 {
+      font-weight: bold;
+    }
+
     @media screen and (max-width: 720px) {
-    .navbar {
-    padding-top: 10px !important;
+      .navbar {
+      padding-top: 10px !important;
       }
     }
+
 
   </style>
 </head>
@@ -99,7 +151,7 @@
               <a class="nav-link" href="6Books.html">Books</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Steps">Steps</a>
+              <a class="nav-link" href="#step">Steps</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#About">About</a>
@@ -118,43 +170,64 @@
   <!------Contents for the homepage: Intro-->
     <section class="home" id="home">
       <div class="content">
-        <h1>Welcome to TUPC Library</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <h5>Read in easy ways</5>
+        <h3>A simple Library System</h3>
+        <p><i>Outreach. Evolving. Innovative.</i></p>
+      </div>
+      <div class="image_content">
+        <img src="images/undraw_mathematics_-4-otb.svg">
       </div>
     </section>
 
+    <!-- Step Section -->
+    <section id="step">
+        <div class="container-fluid step_content">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="section-title">
+                        <h2 class="text-center">How it works?</h2>
+                        <p class="text-center"><i>“A reader lives a thousand lives before he dies..."</i></p>
+                    </div>
+                    <hr class="border-white mb-4 mt-4">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_file_searching_re_3evy.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>1. Search a book</h3>
+                    </figure>
+                </div>
 
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_add_files_re_v09g.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>2. Submit a request form </h3>
+                    </figure>
+                </div>
 
-  <!-------Contents for the Homepage: Steps---->
-  <div class="container-fluid mt-3 display_2">
-    <div>
-      <h1 id="Steps">Simple steps to read books</h1>    
-    </div>
-
-    <div class="row info_steps"> 
-      <div class="col-md-4 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
-      </div>
-
-      <div class="col-md-4 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
-      </div>
-
-      <div class="col-md-4 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
-      </div>
-    </div>   
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_pull_request_gld8.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>3. Wait for the confirmation</h3>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Workflow Section -->
 
 
   <!-------About--------------------------->
   <div class="container-fluid mt-3 display_3">
     <div class="row">
       <div class="col-md-6">
-        <h1 id="About">About</h1>
+        <h1 id="About">About Us</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div class="col-md-6 photo">
-        <img src="https://miscproducts.com/wp-content/uploads/2017/09/placeholder.png" class="img-fluid">
+        <img src="images/undraw_collaborators_re_hont.svg" class="img-fluid">
       </div>
 
     </div>
@@ -194,7 +267,6 @@
 
           <!---------Modal Footer------------>
           <div class="modal-footer border-0">
-            <a href="">Forgot password?</a>
             <button type="button" class="btn btn-primary" value="Login" onclick="window.location.href='3Managementbooks.html'">Login</button>
           </div>
 
@@ -217,10 +289,9 @@
       <div class="col-md-6 mt-md-0 mt-3">
 
         <!-- Content -->
-        <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
-          repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
-          harum esse fugiat. Itaque, culpa?</p>
+        <h5 class="font-weight-bold">TUP MISSION</h5>
+        <p>The mission of TUP is stated in Section 2 of P.D. No. 1518 as follows:
+           The University shall provide higher and advanced vocational, technical, industrial, technological and professional education and training in industries and technology, and in practical arts leading to certificates, diplomas and degrees. It shall provide progressive leadership in applied research, developmental studies in technical, industrial, and technological fields and production using indigenous materials; effect technology transfer in the countryside; and assist in the development of small-and-medium scale industries in identified growth centers.</p>
 
       </div>
       <!-- Grid column -->
@@ -231,10 +302,11 @@
       <div class="col-md-6 mb-md-0 mb-3">
 
         <!-- Content -->
-        <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
-          commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
-          excepturi hic.</p>
+        <h5 class="font-weight-bold">TUP VISION</h5>
+        <p>TUP: A premier state university with recognized excellence in engineering and technology education at par with leading universities in the ASEAN region.</p>
+
+        <h5 class="font-weight-bold">QUALITY POLICY</h5>
+        <p>TUP shall commit to provide quality higher and advanced education; conduct relevant research and extension projects; continually improve its value to customers through enhancement of personnel competence and effective quality management system compliant to statutory and regulatory requirements.</p>
 
       </div>
       <!-- Grid column -->
