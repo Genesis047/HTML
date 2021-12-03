@@ -44,30 +44,15 @@ nav .navbar-nav li a{
 
 .home {
   font-family: 'Inconsolata', monospace;
-  display: flex;
-  flex-wrap: wrap;
   gap:1.5rem;
-  align-items: center;
-  background:url() no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-top: 7rem;
-  padding-bottom: 0rem;
+  min-height: 80vh;
+  padding-top: 10.5rem;
 }
-
-.home .content{
-  flex: 1 1;
-  padding-left: 5rem;
-}
-
-.home .image_content{
-  flex: 1 1;
-  padding-right: 5rem;
-}
-
-.image_content img{
-  width: 100%;
-  padding: 2.5rem;
+.intro_photo > img {
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+  justify-content: center;
   animation:float 3.5s linear infinite;
 }
 
@@ -80,19 +65,16 @@ nav .navbar-nav li a{
   }
 }
 
-.home .content h3 {
-  font-size: 2.6rem;
-  color: black;
-  font-weight: bold;
+.home_row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.home .content h5 {
-  color: grey;
+.intro_text {
+  justify-content: center;
 }
 
-.home .content p {
-  font-size: 1.3rem;
-}
 
 .photo > img {
   object-fit: contain;
@@ -144,24 +126,14 @@ nav .navbar-nav li a{
     display:block;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 908px) {
   .navbar {
   padding-top: 0px !important;
   }
 
   .home {
-    padding-top: 0rem;
-    gap: 0rem;
+    padding-bottom: 2.2rem;
   }
-
-  .home .content{
-  flex: 1 1;
-  padding: 5rem;
-}
-
-.home .image_content{
-  flex: 1 1;
-}
 
 .step_content {
   padding-top: 2rem;
@@ -172,4 +144,3 @@ nav .navbar-nav li a{
     padding-top: 3.2rem;
   }
 }
-

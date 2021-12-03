@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#manage_table').DataTable();
+    $('#fine_table').DataTable();
 });
  
 
@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 $(document).ready(function() {
 
-  $('#myModal_2').on('show.bs.modal', function(e) {
+  $('#myModal').on('show.bs.modal', function(e) {
       console.log(e);
       console.log(e.relatedTarget);
 
@@ -20,14 +20,14 @@ $(document).ready(function() {
        // console.log(_button, _button.parents("tr"));
       var _row = _button.parents("tr");
       var _title = _row.find(".book_title").text();
-      var _author = _row.find(".book_author").text();
-      var _pubdate = _row.find(".pub_date").text();
-      var _isbn = _row.find(".book_isbn").text();
+      var _name = _row.find(".name").text();
+      var _fine = _row.find(".fine").text();
+      var _reason = _row.find(".reason").text();
 
       $(this).find(".mbook_title").val(_title);
-      $(this).find(".mbook_author").val(_author);
-      $(this).find(".mpub_date").val(_pubdate);
-      $(this).find(".mbook_isbn").val(_isbn);
+      $(this).find(".mname").val(_name);
+      $(this).find(".mfine").val(_fine);
+      $(this).find(".mreason").val(_reason);
   });
 
 });
