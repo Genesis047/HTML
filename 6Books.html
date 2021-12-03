@@ -26,13 +26,17 @@
 
 	<script type="text/javascript" src="javascript/book.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/book.css">
-	
+
+	<style>
+
+
+	</style>
 </head>
 
 <body>
 
   <!----Creating Navbar------>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">TUPC Library Management System</a>
 
@@ -46,26 +50,24 @@
               <a class="nav-link" href="1Home.html">Home</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#"><span style="text-decoration: underline;">Books</span></a>
+              <a class="nav-link" href="#">Books</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#Steps">Steps</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#About">About</a>
+              <a class="nav-link disabled" href="#About Us">About</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Login</a>
             </li>
           </ul>
-
-          <!-----------Login Button------------->
-          <form class="d-flex">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
-          </form>
         </div>
     </div>
   </nav> <!---Navbar code ends here------------>
 
   <!------------Add Books Table--------->
-  <div class="container-fluid mt-3">
+  <div class="container-fluid mt-3 table_container">
     <div class="row">
       <div class="col">
 				<table id="book_table" class="table table-borderless"  style="width: 100%;">

@@ -10,142 +10,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
+  <!--------------Box icon link----------------->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <!------------js query----------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <title>TUPC Library Management Systems</title>
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <script type="text/javascript" src="javascript/home.js"></script>
 
-  <style type="text/css">
-
-    .navbar {
-      background: #820000;
-      font-family: 'Inconsolata', monospace;
-      padding-top: 30px;
-    }
-
-    .display_3 {
-      font-family: 'Inconsolata', monospace;
-    }
-
-    .modal {
-      font-family: 'Inconsolata', monospace ;
-    }
-
-    .home {
-      font-family: 'Inconsolata', monospace;
-      display: flex;
-      flex-wrap: wrap;
-      gap:1.5rem;
-      min-height: 91vh;
-      align-items: center;
-      background:url() no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .home .content{
-      flex: 1 1 40rem;
-      padding: 5rem;
-    }
-
-    .home .image_content{
-      flex: 1 1 30rem;
-    }
-
-    .home .image_content img{
-      width: 100%;
-      padding: 2.5rem;
-      animation:float 3.5s linear infinite;
-    }
-
-    @keyframes float{
-      0%, 100%{
-        transform: translateY(0rem);
-      }
-      50%{
-        transform: translateY(3rem);
-      }
-    }
-
-    .home .content h3 {
-      font-size: 2.6rem;
-      color: black;
-      font-weight: bold;
-    }
-
-    .home .content h5 {
-      color: grey;
-    }
-
-    .home .content p {
-      font-size: 1.3rem;
-    }
-
-    .photo > img {
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-    }
-    
-    .img-responsive {
-      width: auto;
-      height: 300px;
-      display: inline-block;
-    }
-
-    .step {
-      justify-content: center;
-    }
-
-    .step_content {
-      padding-top: 4rem;
-      font-family: 'Inconsolata', monospace;
-    }
-
-    .step_content h2 {
-      font-weight: bold;
-    }
-
-
-    .display_3 {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 75vh;
-    }
-
-    .display_3 h1 {
-      font-weight: bold;
-    }
-
-    @media screen and (max-width: 720px) {
-      .navbar {
-      padding-top: 10px !important;
-      }
-    }
-
-
-  </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
   <!-------TUPC Logo------>
 
   <!----Creating Navbar------>
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">TUPC Library Management System</a>
+      <a class="navbar-brand" href="#">Library Management</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="Content">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav nav-link ms-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"><span style="text-decoration: underline;">Home</span></a>
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="6Books.html">Books</a>
@@ -154,14 +52,12 @@
               <a class="nav-link" href="#step">Steps</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#About">About</a>
+              <a class="nav-link" href="#About">About Us</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link button" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Login</a>
+            </li>            
           </ul>
-
-          <!-----------Login Button------------->
-          <form class="d-flex">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
-          </form>
         </div>
     </div>
   </nav> <!---Navbar code ends here---->
@@ -220,10 +116,10 @@
 
 
   <!-------About--------------------------->
-  <div class="container-fluid mt-3 display_3">
+  <div class="container-fluid mt-3 display_3" id="About">
     <div class="row">
       <div class="col-md-6">
-        <h1 id="About">About Us</h1>
+        <h1>About Us</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div class="col-md-6 photo">
@@ -232,7 +128,7 @@
 
     </div>
   </div>
-
+</div>
 
   <!------------Modal pop up form----------->
   <div class="container-fluid">
@@ -325,7 +221,5 @@
 
 </footer>
 <!-- Footer -->
-  
-    
 </body>
 </html>

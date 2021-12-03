@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Outfit&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.navbar {
+  background: whitesmoke;
+  font-family: 'Outfit', sans-serif;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: black !important;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.navbar-nav li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav-link.active {
+  color: #FFCA47 !important;
+}
+
+.display_3 {
+  font-family: 'Inconsolata', monospace;
+}
+
+.modal {
+  font-family: 'Inconsolata', monospace ;
+}
+
+.home {
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+  background:url() no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+}
+
+.home .content{
+  flex: 1 1 40rem;
+  padding: 5rem;
+}
+
+.home .image_content{
+  flex: 1 1 30rem;
+}
+
+.image_content img{
+  width: 100%;
+  padding: 2.5rem;
+  animation:float 3.5s linear infinite;
+}
+
+@keyframes float{
+  0%, 100%{
+    transform: translateY(0rem);
+  }
+  50%{
+    transform: translateY(1.1rem);
+  }
+}
+
+.home .content h3 {
+  font-size: 2.6rem;
+  color: black;
+  font-weight: bold;
+}
+
+.home .content h5 {
+  color: grey;
+}
+
+.home .content p {
+  font-size: 1.3rem;
+}
+
+.photo > img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.img-responsive {
+  width: auto;
+  height: 300px;
+  display: inline-block;
+}
+
+.step_content:before {
+    height: 2.3rem;
+    content: "";
+    display:block;
+}
+
+.step {
+  justify-content: center;
+}
+
+.step_content {
+  padding-top: 4rem;
+  font-family: 'Inconsolata', monospace;
+
+}
+
+.step_content h2 {
+  font-weight: bold;
+}
+
+
+.display_3 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 78vh;
+}
+
+.display_3 h1 {
+  font-weight: bold;
+}
+
+.display_3:before {
+    content: "";
+    display:block;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+  padding-top: 0px !important;
+  }
+
+  .home {
+    padding-top: 0rem;
+    gap: 0rem;
+  }
+
+  .home .content{
+  flex: 1 1 40rem;
+  padding: 5rem;
+}
+
+.home .image_content{
+  flex: 1 1 30rem;
+}
+
+.step_content {
+  padding-top: 2rem;
+  padding-bottom: 0rem !important;
+}
+
+  .display_3 {
+    padding-top: 3.2rem;
+  }
+}
+
