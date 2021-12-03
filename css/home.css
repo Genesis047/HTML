@@ -2,6 +2,9 @@
 html {
   scroll-behavior: smooth;
 }
+.nav-link.active {
+  color: #FFCA47 !important;
+}
 
 body {
   position: relative;
@@ -27,8 +30,8 @@ body {
   padding-right: 15px;
 }
 
-.nav-link.active {
-  color: #FFCA47 !important;
+nav .navbar-nav li a{
+
 }
 
 .display_3 {
@@ -48,17 +51,18 @@ body {
   background:url() no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 3rem;
+  padding-top: 7rem;
   padding-bottom: 0rem;
 }
 
 .home .content{
-  flex: 1 1 40rem;
-  padding: 5rem;
+  flex: 1 1;
+  padding-left: 5rem;
 }
 
 .home .image_content{
-  flex: 1 1 30rem;
+  flex: 1 1;
+  padding-right: 5rem;
 }
 
 .image_content img{
@@ -151,12 +155,12 @@ body {
   }
 
   .home .content{
-  flex: 1 1 40rem;
+  flex: 1 1;
   padding: 5rem;
 }
 
 .home .image_content{
-  flex: 1 1 30rem;
+  flex: 1 1;
 }
 
 .step_content {
