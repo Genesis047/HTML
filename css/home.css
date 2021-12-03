@@ -45,7 +45,7 @@ nav .navbar-nav li a{
 .home {
   font-family: 'Inconsolata', monospace;
   gap:1.5rem;
-  min-height: 80vh;
+  min-height: 85vh;
   padding-top: 10.5rem;
 }
 .intro_photo > img {
