@@ -50,9 +50,22 @@ nav .navbar-nav li a{
 }
 
 .home h1 {
-  
+
 }
 
+.home h5 {
+  color: slategrey;
+}
+
+.home .btn {
+  color: white;
+  background-color: royalblue;
+  transition: 0.5s;
+}
+
+.home .btn:hover {
+  background-color: #FFCA47;
+}
 
 .intro_photo > img {
   object-fit: contain;
