@@ -2,9 +2,6 @@
 html {
   scroll-behavior: smooth;
 }
-.nav-link.active {
-  color: #FFCA47 !important;
-}
 
 body {
   position: relative;
@@ -30,8 +27,8 @@ body {
   padding-right: 15px;
 }
 
-nav .navbar-nav li a{
-
+.nav-link.active {
+  color: #FFCA47 !important;
 }
 
 .display_3 {
