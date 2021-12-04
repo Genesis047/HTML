@@ -48,6 +48,12 @@ nav .navbar-nav li a{
   min-height: 85vh;
   padding-top: 10.5rem;
 }
+
+.home h1 {
+  
+}
+
+
 .intro_photo > img {
   object-fit: contain;
   width: 80%;
