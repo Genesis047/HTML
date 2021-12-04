@@ -5,12 +5,6 @@ $(document).ready(function() {
 
 
  $(window).scroll(function(){
- $('nav').toggleClass('scrolled', $(this).scrollTop() > 500);
+ $('nav').toggleClass('scrolled', $(this).scrollTop() > 250);
  });
 
-$('.multiple-items').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
-});
-    

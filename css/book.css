@@ -34,14 +34,14 @@ body {
 }
 
 .carousel, .carousel-item {
-  height: 100vh;
+  height: 50vh;
 }
 
 .carousel-item img {
-    position: absolute;
+  object-fit: cover;
     top: 0;
     left: 0;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 .table_container {
