@@ -194,7 +194,8 @@ body {
 
 .footer{
   background: #152F4F;
-  color:white;
+  color:
+  font-family: 'Outfit', monospace ;
 }
 
 .app_icon {
