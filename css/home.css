@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,9 +47,6 @@ body {
   padding-top: 10.5rem;
 }
 
-.home h1 {
-
-}
 
 .home h5 {
   color: slategrey;
@@ -122,15 +120,16 @@ body {
 }
 
 .step_content h2 {
+  font-family: 'Montserrat', monospace;
   font-weight: bold;
 }
 
 
 .display_3 {
   display: flex;
-  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  padding-top: 4rem;
+  padding-top: 5rem !important;
 }
 
 .display_3:before {
@@ -143,12 +142,12 @@ body {
   padding: 20px;
   box-shadow: 0px 0px 10px 0px #c5c5c5;
   margin-bottom: 30px;
-  float: left;
-  border-radius: 10px;
+  border-radius: 15px;
+  width: 20rem !important;
 }
 
 .card-thumbnail {
-  height: 40vh;
+  height: 20vh;
 }
 
 .card-thumbnail > img {
@@ -195,8 +194,8 @@ body {
 
 .footer{
   background: #152F4F;
-  color:
-  font-family: 'Outfit', monospace ;
+  color:white;
+  font-family: 'Montserrat', monospace;
 }
 
 .app_icon {
@@ -208,6 +207,10 @@ body {
 .app_icon .text {
   font-size: 1rem !important;
   padding-right: 2rem;
+}
+
+.about-company h2 {
+  font-family: 'Outfit', monospace !important;
 }
 
 .about-company i{
@@ -225,6 +228,10 @@ body {
 .location i{
   font-size: 18px;
   padding-right: 1rem !important;
+}
+
+.location h4{
+  font-family: 'Outfit', monospace;
 }
 
 .location .copyright p{

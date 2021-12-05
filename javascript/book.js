@@ -5,6 +5,6 @@ $(document).ready(function() {
 
 
  $(window).scroll(function(){
- $('nav').toggleClass('scrolled', $(this).scrollTop() > 250);
+ $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
  });
 

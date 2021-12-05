@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -78,6 +78,7 @@ img{
 .footer{
   background: #152F4F;
   color:white;
+  font-family: 'Montserrat', monospace;
 }
 
 .app_icon {
@@ -91,6 +92,10 @@ img{
   padding-right: 2rem;
 }
 
+.about-company h2 {
+  font-family: 'Outfit', monospace !important;
+}
+
 .about-company i{
   font-size: 25px;
 }
@@ -99,6 +104,7 @@ img{
   color:white;
   transition: color .2s;
 }
+
 .about-company a:hover{
   color:#4180CB
 }
@@ -106,6 +112,10 @@ img{
 .location i{
   font-size: 18px;
   padding-right: 1rem !important;
+}
+
+.location h4{
+  font-family: 'Outfit', monospace;
 }
 
 .location .copyright p{
