@@ -1,0 +1,142 @@
+    <div class="content">
+      <h5>Read in easy ways</5>
+      <h3>A simple Library System</h3>
+      <button class="btn btn-primary">Read now</button>
+    </div>
+
+    <div class="image_content">
+      <img src="images/undraw_reading_time_gvg0.svg">
+    </div>
+
+
+
+
+
+
+    .home {
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+  background:url() no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 7rem;
+  padding-bottom: 0rem;
+}
+
+.home .content{
+  flex: 1 1;
+  padding-left: 5rem;
+}
+
+.home .image_content{
+  flex: 1 1;
+  padding-right: 5rem;
+}
+
+.image_content img{
+  width: 100%;
+  padding: 2.5rem;
+  animation:float 3.5s linear infinite;
+}
+
+@keyframes float{
+  0%, 100%{
+    transform: translateY(0rem);
+  }
+  50%{
+    transform: translateY(1.1rem);
+  }
+}
+
+.home .content h3 {
+  font-size: 2.6rem;
+  color: black;
+  font-weight: bold;
+}
+
+.home .content h5 {
+  color: grey;
+}
+
+.home .content p {
+  font-size: 1.3rem;
+}
+
+
+
+at media
+
+  .home {
+    padding-top: 0rem;
+    gap: 0rem;
+  }
+
+  .home .content{
+  flex: 1;
+  padding: 5rem;
+}
+
+.home .image_content{
+  flex: 1 5 ;
+}
+
+
+
+
+
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://th.bing.com/th/id/OIP.F00dCf4bXxX0J-qEEf4qIQHaD6?pid=ImgDet&rs=1" class="d-block w-100" width="100%" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://th.bing.com/th/id/OIP.F00dCf4bXxX0J-qEEf4qIQHaD6?pid=ImgDet&rs=1" class="d-block w-100" width="100%" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://th.bing.com/th/id/OIP.F00dCf4bXxX0J-qEEf4qIQHaD6?pid=ImgDet&rs=1" class="d-block w-100" width="100%" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+.carousel, .carousel-item {
+  height: 350px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 350px;
+}

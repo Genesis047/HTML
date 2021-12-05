@@ -1,8 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Outfit&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
 .navbar {
-    background: #820000;
-    font-family: 'Inconsolata', monospace;
-    padding-top: 30px;
- }
+  background: transparent !important;
+  transition: 0.75s ease;
+  font-family: 'Outfit', sans-serif;
+  padding: 10px;
+}
+
+.navbar.scrolled {
+    background: #F5F5F5!important;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: black !important;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.navbar-nav li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.carousel, .carousel-item {
+  height: 50vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 50vh;
+}
+
+.table_container {
+	padding: 1.5rem;
+}
 
 table, th, td {
 	margin: 0px !important;
@@ -17,18 +61,53 @@ img{
   height: 10vw !important;
 }
 
+
+
  .modal {
     font-family: 'Inconsolata', monospace ;
 }
 
 @media screen and (max-width: 720px) {
-  .navbar {
-  	padding-top: 10px !important;
-   }
-
   .table{
     display: block;
     overflow-x: auto !important;
     width: 100% !important;
   }
 }
+
+.footer{
+  background: #152F4F;
+  color:white;
+}
+
+.app_icon {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.app_icon .text {
+  font-size: 1rem !important;
+  padding-right: 2rem;
+}
+
+.about-company i{
+  font-size: 25px;
+}
+
+.about-company a{
+  color:white;
+  transition: color .2s;
+}
+.about-company a:hover{
+  color:#4180CB
+}
+
+.location i{
+  font-size: 18px;
+  padding-right: 1rem !important;
+}
+
+.location .copyright p{
+  border-top:1px solid rgba(255,255,255,.1);
+} 

@@ -10,142 +10,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
+  <!----------boxicon-------------->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!------------js query----------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <title>TUPC Library Management Systems</title>
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <script type="text/javascript" src="javascript/home.js"></script>
 
-  <style type="text/css">
-
-    .navbar {
-      background: #820000;
-      font-family: 'Inconsolata', monospace;
-      padding-top: 30px;
-    }
-
-    .display_3 {
-      font-family: 'Inconsolata', monospace;
-    }
-
-    .modal {
-      font-family: 'Inconsolata', monospace ;
-    }
-
-    .home {
-      font-family: 'Inconsolata', monospace;
-      display: flex;
-      flex-wrap: wrap;
-      gap:1.5rem;
-      min-height: 91vh;
-      align-items: center;
-      background:url() no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .home .content{
-      flex: 1 1 40rem;
-      padding: 5rem;
-    }
-
-    .home .image_content{
-      flex: 1 1 30rem;
-    }
-
-    .home .image_content img{
-      width: 100%;
-      padding: 2.5rem;
-      animation:float 3.5s linear infinite;
-    }
-
-    @keyframes float{
-      0%, 100%{
-        transform: translateY(0rem);
-      }
-      50%{
-        transform: translateY(3rem);
-      }
-    }
-
-    .home .content h3 {
-      font-size: 2.6rem;
-      color: black;
-      font-weight: bold;
-    }
-
-    .home .content h5 {
-      color: grey;
-    }
-
-    .home .content p {
-      font-size: 1.3rem;
-    }
-
-    .photo > img {
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-    }
-    
-    .img-responsive {
-      width: auto;
-      height: 300px;
-      display: inline-block;
-    }
-
-    .step {
-      justify-content: center;
-    }
-
-    .step_content {
-      padding-top: 4rem;
-      font-family: 'Inconsolata', monospace;
-    }
-
-    .step_content h2 {
-      font-weight: bold;
-    }
-
-
-    .display_3 {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 75vh;
-    }
-
-    .display_3 h1 {
-      font-weight: bold;
-    }
-
-    @media screen and (max-width: 720px) {
-      .navbar {
-      padding-top: 10px !important;
-      }
-    }
-
-
-  </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
   <!-------TUPC Logo------>
 
   <!----Creating Navbar------>
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">TUPC Library Management System</a>
+      <a class="navbar-brand" href="#"><i class="bi bi-book" style="padding-right: 1rem;"></i>The Library</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="Content">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav nav-link ms-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"><span style="text-decoration: underline;">Home</span></a>
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="6Books.html">Books</a>
@@ -154,30 +56,37 @@
               <a class="nav-link" href="#step">Steps</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#About">About</a>
+              <a class="nav-link" href="#About">About Us</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link button" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Login</a>
+            </li>            
           </ul>
-
-          <!-----------Login Button------------->
-          <form class="d-flex">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
-          </form>
         </div>
     </div>
   </nav> <!---Navbar code ends here---->
 
 
   <!------Contents for the homepage: Intro-->
-    <section class="home" id="home">
-      <div class="content">
-        <h5>Read in easy ways</5>
-        <h3>A simple Library System</h3>
-        <p><i>Outreach. Evolving. Innovative.</i></p>
+  <section class="home container-fluid" id="home">
+      
+      <div class="row home_row">
+        <div class="col-md-6 intro_text text-center">
+          <h5>Read in easy ways.</h5>
+          <h1>A simple Library System</h1>
+          <button class="btn">Read now</button>
+        </div>
+
+        <div class="col-md-6 intro_photo text-center">
+          <img src="images/undraw_reading_time_gvg0.svg" class="img-fluid img-responsive">
+        </div>
+
+
       </div>
-      <div class="image_content">
-        <img src="images/undraw_mathematics_-4-otb.svg">
-      </div>
-    </section>
+    </div>
+
+
+  </section>
 
     <!-- Step Section -->
     <section id="step">
@@ -210,7 +119,7 @@
                 <div class="col-md-4">
                     <figure class="work-process text-center">
                       <img src="images/undraw_pull_request_gld8.svg" class="img-fluid img-responsive rounded-circle">
-                      <h3>3. Wait for the confirmation</h3>
+                      <h3>3. Wait for confirmation</h3>
                     </figure>
                 </div>
             </div>
@@ -220,10 +129,10 @@
 
 
   <!-------About--------------------------->
-  <div class="container-fluid mt-3 display_3">
+  <div class="container-fluid mt-3 display_3" id="About">
     <div class="row">
       <div class="col-md-6">
-        <h1 id="About">About Us</h1>
+        <h1>About Us</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
       <div class="col-md-6 photo">
@@ -232,7 +141,7 @@
 
     </div>
   </div>
-
+</div>
 
   <!------------Modal pop up form----------->
   <div class="container-fluid">
@@ -276,56 +185,42 @@
     </div>    
   </div> <!-------------Modal code ends here----->
 
-<!-- Footer -->
-<footer class="page-footer font-small teal pt-4">
-
-  <!-- Footer Text -->
-  <div class="container-fluid text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold">TUP MISSION</h5>
-        <p>The mission of TUP is stated in Section 2 of P.D. No. 1518 as follows:
-           The University shall provide higher and advanced vocational, technical, industrial, technological and professional education and training in industries and technology, and in practical arts leading to certificates, diplomas and degrees. It shall provide progressive leadership in applied research, developmental studies in technical, industrial, and technological fields and production using indigenous materials; effect technology transfer in the countryside; and assist in the development of small-and-medium scale industries in identified growth centers.</p>
-
+  <!----------footer----------->
+  <div class="mt-5 pt-5 pb-2 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-xs-12 about-company">
+          <h2><i class="bi bi-book" style="padding-right: 1rem;"></i>The Library</h2>
+          <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+          <p><a href="#"><i class="bi bi-facebook p-1"></i></a>
+             <a href="#"><i class="bi bi-linkedin p-1"></i></a></p>
+        </div>
+        <div class="col-lg-5 col-xs-12 location">
+          <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+          <p>Carlos Trinidad Ave, Salawag, Dasmarinas, Cavite</p>
+          <p class="mb-0"><i class="bi bi-telephone"></i>(541) 754-3010</p>
+          <p><i class="bi bi-envelope"></i>info@hsdf.com</p>
+        </div>
       </div>
-      <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none pb-3">
+      <div class="row p-0">
+        <div class="col-lg-12 col-xs-12 app_icon">
+          <p class="text">Powered by</p>
+          <p><i class='bx bxl-bootstrap'></i></p>
+          <p><i class='bx bxl-javascript'></i></p>
+          <p><i class='bx bxl-css3'></i></p>
+          <p><i class='bx bxl-jquery'></i></p>
+          <p><i class='bx bxl-github' ></i></p>
 
-      <!-- Grid column -->
-      <div class="col-md-6 mb-md-0 mb-3">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold">TUP VISION</h5>
-        <p>TUP: A premier state university with recognized excellence in engineering and technology education at par with leading universities in the ASEAN region.</p>
-
-        <h5 class="font-weight-bold">QUALITY POLICY</h5>
-        <p>TUP shall commit to provide quality higher and advanced education; conduct relevant research and extension projects; continually improve its value to customers through enhancement of personnel competence and effective quality management system compliant to statutory and regulatory requirements.</p>
-
+        </div>
       </div>
-      <!-- Grid column -->
 
+      <div class="row p-0">
+        <div class="col copyright">
+          <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
+        </div>
+      </div>
     </div>
-    <!-- Grid row -->
-
   </div>
-  <!-- Footer Text -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-  
-    
 </body>
 </html>

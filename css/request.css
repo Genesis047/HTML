@@ -1,0 +1,25 @@
+	.offcanvas, .content {
+		font-family: 'Inconsolata', monospace;
+	 }
+
+  .modal {
+    font-family: 'Inconsolata', monospace ;
+  }
+
+  .table_page {
+    padding-top: 2rem;
+  }
+
+ 	.action {
+ 		display: flex;
+ 		justify-content: space-evenly;
+ 	}
+
+  @media screen and (max-width: 720px) {
+  .table{
+    display: block;
+    overflow-x: auto !important;
+    width: 100% !important;
+  }
+  
+}	

@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!----------Google font link----------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
-	<!----------Google font link----------->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <!--------------Box icon link----------------->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-  
+  <!------------Icon Library----------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Bootstrap Font Icon CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-	
-	<title>TUPC Library Management System</title>
-	
+  <!-------------Data Table---------------->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+	<script type="text/javascript" src="javascript/fine.js"></script>
+
 	<style type="text/css">
 
 		.offcanvas, .content {
@@ -41,13 +48,6 @@
 	  }
 
 	</style>
-	<!---------------------Tooltip---------------------->
-  <script>
-    $(document).ready(function(){
-        $('[data-bs-toggle="tooltip"]').tooltip();   
-    });
-  </script>
-
 </head>
 <body>
 
@@ -95,7 +95,7 @@
 
 	            <div class="row">
 	              <div class="col">
-	                <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+	                <button class="btn float-end has-tooltip" title="Sidebar" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
 	                  <i class="fs-2 bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
 	                </button>
 	              </div>
@@ -107,66 +107,53 @@
 	              </div>
 	            </div>
 
-	            <div class="row">
-	              	<div class="col">
-		                <!-----------Search bar, etc.--------->
-		                <form class="d-flex" style="font-family: 'Inconsolata', monospace;">
-		                  <input class="form-control me-2" type="search" placeholder="Search Book Title" aria-label="Search">
-		                </form>
-	            	</div>
-	            </div>
 
+	            <!----------------Table------------------------------>
 	            <div class="row">
 	            	<div class="col">
 	            		<div class="table responsive">
-						  <table class="table table-hover">
-						    <thead>
-						    <tr>
-						      <th>Student Name</th>
-						      <th>Book Borrowed</th>
-						      <th>Penalty Fine</th>
-						      <th>Reason</th>
-						      <th>Action</th>
-						    </tr>
-						    </thead>
+									  <table class="table table-hover table-borderless" id="fine_table" style="width: 100%;">
+									    <thead>
+									    <tr>
+									      <th>Student Name</th>
+									      <th>Book Borrowed</th>
+									      <th>Penalty Fine</th>
+									      <th>Reason</th>
+									      <th>Action</th>
+									    </tr>
+									    </thead>
 
-						    <tr>
-						      <td>Cpet12L</td>
-						      <td>Josef Alonzo</td>
-						      <td>Student 1</td>
-						      <td>24/10/2001</td>
-							  <td>30/10/21</td>
-							  <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-pencil-square"></i></button></td>
-						    </tr>
+									    <tr>
+									      <td class="name">Cpet12L</td>
+									      <td class="book_title">Josef Alonzo</td>
+									      <td class="fine">Student 1</td>
+									      <td class="reason">24/10/2001</td>
+										  	<td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-wallet2"></i></button></td>
+									    </tr>
 
-						    <tr>
-						      <td>Cpet12L</td>
-						      <td>Josef Alonzo</td>
-						      <td>Student 1</td>
-						      <td>24/10/2001</td>
-							  <td>30/10/21</td>
-							  <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-pencil-square"></i></button></td>
-						    </tr>
+									    <tr>
+									      <td class="name">Cpet12L</td>
+									      <td class="book_title">Josef Alonzo</td>
+									      <td class="fine">Student 1</td>
+									      <td class="reason">24/10/2001</td>
+										  	<td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-wallet2"></i></button></td>
+									    </tr>
 
-						    <tr>
-						      <td>Cpet12L</td>
-						      <td>Josef Alonzo</td>
-						      <td>Student 1</td>
-						      <td>24/10/2001</td>
-							  <td>30/10/21</td>
-							  <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-pencil-square"></i></button></td>
-						    </tr>
-						   </table>
+									    <tr>
+									      <td class="name">Cpet12L</td>
+									      <td class="book_title">Josef Alonzo</td>
+									      <td class="fine">Student 1</td>
+									      <td class="reason">24/10/2001</td>
+										  	<td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-wallet2"></i></button></td>
+									    </tr>
+									   </table>
 
-	            	</div> 
-	            </div> <!----------row col for table------------->
-	            
-
-            </div>
-        </div> <!--------ROW AND COL----------->
-    
-    </div>
-    </div>
+				        </div> 
+				      </div> <!----------row col for table------------->
+				            
+			    
+			  </div>
+			</div>
 	</div><!---------Table and Container ends here--------------------------->
 
 
@@ -188,40 +175,23 @@
               <form>
                 <div class="form-group">
                   <label for="title">Book Title</label>
-                  <input type="text" class="form-control" id="title" name="title" disabled="">
+                  <input type="text" class="form-control mbook_title" id="title" name="title" disabled>
                 </div>
 
                 <div class="form-group">
-                 	<label for="author">Author</label>
-                 	<input type="text" class="form-control" id="author" name="author" disabled="">
+                 	<label for="name">Name</label>
+                 	<input type="text" class="form-control mname" id="name" name="name" disabled>
                 </div>
 
                 <div class="form-group">
-                  	<label for="author">Borrow Expiration Date</label>
-                 	<input type="text" class="form-control" id="expiration" name="expirtation" disabled>
-                </div>
-                
-                <div class="form-group">
-                  	<label for="start">Return Date</label>
-                  	<input type="date" class="form-control" id="start" name="trip-start"
-                     value="2000-01-01"
-                     min="1980-01-01" max="2021-12-31">
+                  	<label for="fine">Fine</label>
+                 	<input type="text" class="form-control mfine" id="fine" name="fine" disabled>
                 </div>
 
                 <div class="form-group">
-                  	<label for="fine">Book Fine</label>
-                 	<input type="text" class="form-control" id="fine" name="fine" placeholder="Specify amount...">
-                </div>
-
-              	<div class="form-group">
                   	<label for="reason">Reason</label>
-                  	<select class="form-control" name="reason" id="reason">
-					  <option value="none">N/A</option>
-					  <option value="late">Returned Late</option>
-					  <option value="lost">Book Lost</option>
-					  <option value="damaged">Book Damaged</option>
-					</select>
-               	</div>
+                 	<input type="text" class="form-control mreason" id="reason" name="reason" disabled>
+                </div>
 
               </form>
             </div>

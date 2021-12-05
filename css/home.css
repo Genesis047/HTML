@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Outfit&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.navbar {
+  background: whitesmoke;
+  font-family: 'Outfit', sans-serif;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: black !important;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.navbar-nav li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav-link.active {
+  color: #FFCA47 !important;
+}
+
+.display_3 {
+  font-family: 'Inconsolata', monospace;
+}
+
+.modal {
+  font-family: 'Inconsolata', monospace ;
+}
+
+.home {
+  font-family: 'Inconsolata', monospace;
+  gap:1.5rem;
+  min-height: 85vh;
+  padding-top: 10.5rem;
+}
+
+.home h1 {
+
+}
+
+.home h5 {
+  color: slategrey;
+}
+
+.home .btn {
+  color: white;
+  background-color: royalblue;
+  transition: 0.5s;
+}
+
+.home .btn:hover {
+  background-color: #FFCA47;
+}
+
+.intro_photo > img {
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+  justify-content: center;
+  animation:float 3.5s linear infinite;
+}
+
+@keyframes float{
+  0%, 100%{
+    transform: translateY(0rem);
+  }
+  50%{
+    transform: translateY(1.1rem);
+  }
+}
+
+.home_row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.intro_text {
+  justify-content: center;
+}
+
+
+.photo > img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.img-responsive {
+  width: auto;
+  height: 300px;
+  display: inline-block;
+}
+
+.step_content:before {
+    height: 2.3rem;
+    content: "";
+    display:block;
+}
+
+.step {
+  justify-content: center;
+}
+
+.step_content {
+  padding-top: 4rem;
+  font-family: 'Inconsolata', monospace;
+
+}
+
+.step_content h2 {
+  font-weight: bold;
+}
+
+
+.display_3 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 78vh;
+}
+
+.display_3 h1 {
+  font-weight: bold;
+}
+
+.display_3:before {
+    content: "";
+    display:block;
+}
+
+@media screen and (max-width: 908px) {
+  .navbar {
+  padding-top: 0px !important;
+  }
+
+  .home {
+    padding-bottom: 2.2rem;
+  }
+
+  .step_content {
+  padding-top: 2rem;
+  padding-bottom: 0rem !important;
+}
+
+  .display_3 {
+    padding-top: 3.2rem;
+  }
+}
+
+.footer{
+  background: #152F4F;
+  color:white;
+}
+
+.app_icon {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.app_icon .text {
+  font-size: 1rem !important;
+  padding-right: 2rem;
+}
+
+.about-company i{
+  font-size: 25px;
+}
+
+.about-company a{
+  color:white;
+  transition: color .2s;
+}
+.about-company a:hover{
+  color:#4180CB
+}
+
+.location i{
+  font-size: 18px;
+  padding-right: 1rem !important;
+}
+
+.location .copyright p{
+  border-top:1px solid rgba(255,255,255,.1);
+} 
+
