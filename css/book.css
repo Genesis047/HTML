@@ -67,7 +67,7 @@ img{
     font-family: 'Inconsolata', monospace ;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1140px) {
   .table{
     display: block;
     overflow-x: auto !important;
