@@ -140,3 +140,27 @@ at media
     left: 0;
     min-height: 350px;
 }
+
+
+      <div class="col-md-6">
+        <h1>About Us</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      <div class="col-md-6 photo">
+        <img src="images/undraw_collaborators_re_hont.svg" class="img-fluid">
+      </div>
+
+    </div>
+
+
+
+    .display_3 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 78vh;
+}
+
+.display_3 h1 {
+  font-weight: bold;
+}
