@@ -86,9 +86,8 @@ body {
 }
 
 .intro_text {
-  justify-content: center;
+  padding-left: 5rem;
 }
-
 
 .photo > img {
   object-fit: contain;
