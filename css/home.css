@@ -43,8 +43,8 @@ body {
 .home {
   font-family: 'Inconsolata', monospace;
   gap:1.5rem;
-  min-height: 85vh;
-  padding-top: 10.5rem;
+  min-height: 84vh;
+  padding-top: 9.5rem;
 }
 
 
@@ -124,7 +124,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 5rem !important;
+  padding-top: 4rem !important;
 }
 
 .display_3:before {
@@ -176,13 +176,17 @@ body {
     padding-bottom: 2.2rem;
   }
 
+  .home_row {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
   .step_content {
-  padding-top: 2rem;
-  padding-bottom: 0rem !important;
+  padding-top: 2rem !important;
 }
 
   .display_3 {
-    padding-top: 3.2rem;
+    padding-top: 2rem !important;
   }
 }
 
@@ -232,4 +236,3 @@ body {
 .location .copyright p{
   border-top:1px solid rgba(255,255,255,.1);
 } 
-
