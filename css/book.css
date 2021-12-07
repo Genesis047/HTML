@@ -39,9 +39,9 @@ body {
 
 .carousel-item img {
   object-fit: cover;
-    top: 0;
-    left: 0;
-    min-height: 50vh;
+  top: 0;
+  left: 0;
+  min-height: 50vh;
 }
 
 .table_container {

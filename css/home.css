@@ -43,10 +43,9 @@ body {
 .home {
   font-family: 'Inconsolata', monospace;
   gap:1.5rem;
-  min-height: 84vh;
+  min-height: 70vh;
   padding-top: 9.5rem;
 }
-
 
 .home h5 {
   color: slategrey;
@@ -64,8 +63,8 @@ body {
 
 .intro_photo > img {
   object-fit: contain;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   justify-content: center;
   animation:float 3.5s linear infinite;
 }
@@ -86,7 +85,7 @@ body {
 }
 
 .photo > img {
-  object-fit: contain;
+  object-fit: contain=;
   width: 100%;
   justify-content: center;
 }
@@ -103,13 +102,9 @@ body {
     display:block;
 }
 
-.step {
-  justify-content: center;
-}
-
 .step_content {
   padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   font-family: 'Inconsolata', monospace;
 
 }
@@ -164,7 +159,15 @@ body {
 
 .card-box h3 a {
     font-size: 20px;
-    text-decoration: none;
+}
+
+.card-box p {
+  color: grey;
+}
+
+.card-box i {
+  padding-right: 1rem;
+  color: blue;
 }
 
 @media screen and (max-width: 1140px) {
