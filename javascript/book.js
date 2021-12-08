@@ -1,5 +1,12 @@
 $(document).ready(function() {
-    $('#book_table').DataTable();
+ $('#book_table').DataTable({
+    
+    order : [],
+    "columnDefs": [ {
+    "targets": 'no-sort',
+    "orderable": false,
+    } ]
+ });
 });
  
 

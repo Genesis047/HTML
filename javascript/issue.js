@@ -1,5 +1,12 @@
 $(document).ready(function() {
-    $('#issue_table').DataTable();
+    $('#issue_table').DataTable({
+      order : [],
+      "columnDefs": [ {
+      "targets": 'no-sort',
+      "orderable": false,
+    } ]
+
+  });
 });
 
 $(document).ready(function(){

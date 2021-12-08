@@ -1,5 +1,11 @@
 $(document).ready(function() {
-    $('#manage_table').DataTable();
+    $('#manage_table').DataTable({
+      order : [],
+      "columnDefs": [ {
+      "targets": 'no-sort',
+      "orderable": false,
+    } ]
+  });
 });
  
 
