@@ -191,6 +191,10 @@ body {
   .display_3 {
     padding-top: 2rem !important;
   }
+
+  .card-box {
+    width: 17rem !important;
+  }
 }
 
 
