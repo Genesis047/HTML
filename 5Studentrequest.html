@@ -85,15 +85,12 @@
 		          <button class="btn float-end has-tooltip" title="Sidebar" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
 		            <i class="fs-2 bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
 		          </button>
-		          <button type="button" class="btn float-end has-tooltip" title="Save PDF">
-		            <i class="fs-2 bi bi-file-earmark-pdf"></i>
-		          </button>
 		        </div>
 		      </div>
 
 		      <div class="row table_page">
 		        <div class="col table-responsive">
-				      <table id="request_table" class="table table-borderless" style="width: 100%;">
+				      <table id="request_table" class="table table-hover table-borderless" style="width: 100%;">
 				        <thead>
 							    <tr>
 							    	<th>Student Name</th>
@@ -267,8 +264,8 @@
 
           <!---------Modal Footer------------>
           <div class="modal-footer border-0">
-            <input class="btn btn-warning" type="submit" value="Cancel">
-            <input class="btn btn-success" type="submit" value="Update">
+            <input class="btn btn-warning" type="submit" data-bs-dismiss="modal" value="Cancel">
+            <input class="btn btn-success" type="submit" value="Approve">
           </div>
 
         </div>
