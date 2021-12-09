@@ -5,7 +5,12 @@ $(document).ready(function() {
     "columnDefs": [ {
     "targets": 'no-sort',
     "orderable": false,
-    } ]
+    } ],
+
+            "language": {
+            "zeroRecords": "Sorry, the book may not be available as of the moment.",
+            "infoEmpty": "No records available"
+        }
  });
 });
  
