@@ -148,7 +148,7 @@ body {
 }
 
 .card-box .card-thumbnail {
-    overflow: hidden;
+    overflow-x: hidden;
     border-radius: 10px;
     transition: 1s;
 }
