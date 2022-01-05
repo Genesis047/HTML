@@ -22,6 +22,9 @@
   <!------------js query----------------------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+  <!-------Sweetalert2------------------------------------->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
   <link rel = "icon" href="images/logo.svg" type = "image/svg">
   <title>The Library</title>
 
@@ -202,13 +205,24 @@
 
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
-                <small id="emailtext" class="form-text text-muted">We'll never share your email to anyone</small>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                  </div>
+
+                  <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+                </div>
+                <small id="emailtext" class="form-text text-muted">Never share your email to anyone</small>
               </div>
 
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
               </div>
 
             </form>
@@ -216,7 +230,7 @@
 
           <!---------Modal Footer------------>
           <div class="modal-footer border-0">
-            <button type="button" class="btn btn-primary" value="Login" onclick="window.location.href='3Managementbooks.html'">Login</button>
+            <button type="button" class="btn btn-primary" value="Login" onclick="validateForm()">Login</button>
           </div>
 
         </div>
