@@ -37,3 +37,47 @@ $(document).ready(function() {
   });
 
 });
+
+
+$(document).ready(function() {
+    $('#myModal').on('hidden.bs.modal', function () {
+      $(this).find('form').trigger('reset');
+    });
+
+    $('#addRow').on( 'click', function () {
+            var table = $('#manage_table').DataTable();
+
+            var titlebook = document.getElementById("titlebook").value;
+            var author = document.getElementById("author").value;
+            var start = document.getElementById("start").value;
+            var isbn = document.getElementById("isbn").value;
+
+            if ( titlebook == "" || author == "" || start == "" || isbn == ""){
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Incomplete data detected!'
+              })
+
+            }
+
+            else {
+              $('#myModal').modal('toggle'); 
+              Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Book added successfuly!',
+              })
+              table.row.add([
+                      'image',
+                      titlebook,
+                      author,
+                      start,
+                      isbn,
+                      'available',
+                      'remove',
+              ]).draw();
+        
+              }
+    } );
+} );

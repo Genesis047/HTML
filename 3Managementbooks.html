@@ -24,6 +24,9 @@
   <!-------------Data Table---------------->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+  
+  <!-------Sweetalert2------------------------------------->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script type="text/javascript" src="javascript/manage.js"></script>
 
@@ -368,8 +371,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="title">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <label for="titlebook">Title</label>
+                  <input type="text" class="form-control" id="titlebook" name="title">
                 </div>
 
                 <div class="form-group">
@@ -394,7 +397,7 @@
             <!---------Modal Footer------------>
             <div class="modal-footer border-0">
               <input class="btn btn-warning" type="submit" data-bs-dismiss="modal" value="Cancel">
-              <input class="btn btn-success" type="submit" value="Apply">
+              <input class="btn btn-success" type="submit" value="Apply" id="addRow">
             </div>
 
           </div>
