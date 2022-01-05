@@ -1,5 +1,9 @@
 $(document).ready(function(){
-  $('body').scrollspy({target: ".navbar", offset: 50});   
+  $('body').scrollspy({target: ".navbar", offset: 50}); 
+   
+  $('#myModal').on('hidden.bs.modal', function () {
+    $(this).find('form').trigger('reset');
+  }) 
 });
 
 

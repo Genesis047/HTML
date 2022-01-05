@@ -13,13 +13,17 @@ $(document).ready(function() {
         }
  });
 });
- 
+
+$(document).ready(function(){
+   $('#myModal').on('hidden.bs.modal', function () {
+    $(this).find('form').trigger('reset');
+  }) 
+});
 
 
  $(window).scroll(function(){
  $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
  });
-
 
 function validateForm() {
   var username = document.getElementById("email").value;
