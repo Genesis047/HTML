@@ -16,7 +16,11 @@ $(document).ready(function() {
 
 $(document).ready(function(){
    $('#myModal').on('hidden.bs.modal', function () {
-    $(this).find('form').trigger('reset');
+      $(this).find('form').trigger('reset');
+  })
+
+   $('#myModalBorrow').on('hidden.bs.modal', function () {
+      $(this).find('form').trigger('reset');
   }) 
 });
 
@@ -48,3 +52,28 @@ function validateForm() {
   }
 
 }
+
+
+$(document).ready(function() {
+
+  //$(".zz-modal").click(function() {
+  //  $("#con-close-modal").modal('show');
+  //});
+
+  $('#myModalBorrow').on('show.bs.modal', function(e) {
+      console.log(e);
+      console.log(e.relatedTarget);
+
+
+      var _button = $(e.relatedTarget); // Button that triggered the modal
+
+       // console.log(_button, _button.parents("tr"));
+      var _row = _button.parents("tr");
+      var _title = _row.find(".book_title").text();
+      var _author = _row.find(".book_author").text();
+
+      $(this).find(".mtitle").val(_title);
+      $(this).find(".mauthor").val(_author);
+  });
+
+});
