@@ -69,3 +69,21 @@ $(document).ready( function() {
     var today = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
     $('#issue_d').val(today);
 });
+
+$(document).ready(function(){
+  $("#sign_out").click(function(){
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'signing out from Admin Account...',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirm'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location = "1Home.html"
+      }
+    })
+  });
+});
