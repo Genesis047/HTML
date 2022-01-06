@@ -46,7 +46,6 @@ $(document).ready(function(){
   $("#sign_out").click(function(){
     Swal.fire({
       title: 'Are you sure?',
-      text: 'signing out from Admin Account...',
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

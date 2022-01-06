@@ -15,31 +15,6 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
-
-  $('#myModal_2').on('show.bs.modal', function(e) {
-      console.log(e);
-      console.log(e.relatedTarget);
-
-
-      var _button = $(e.relatedTarget); // Button that triggered the modal
-
-       // console.log(_button, _button.parents("tr"));
-      var _row = _button.parents("tr");
-      var _title = _row.find(".book_title").text();
-      var _author = _row.find(".book_author").text();
-      var _pubdate = _row.find(".pub_date").text();
-      var _isbn = _row.find(".book_isbn").text();
-
-      $(this).find(".mbook_title").val(_title);
-      $(this).find(".mbook_author").val(_author);
-      $(this).find(".mpub_date").val(_pubdate);
-      $(this).find(".mbook_isbn").val(_isbn);
-  });
-
-});
-
-
-$(document).ready(function() {
     $('#myModal').on('hidden.bs.modal', function () {
       $(this).find('form').trigger('reset');
     });
@@ -74,20 +49,56 @@ $(document).ready(function() {
                       author,
                       start,
                       isbn,
-                      'available',
-                      "<button>Remove</button>"
-              ]).draw();
-        
+                      'Available',
+                      "<button class='removeButton'><span class='icon'></span>Remove</button>"
+              ]).draw();;
               }
     } );
 } );
 
 
 $(document).ready(function(){
+     $("#manage_table").on('click', '.removeButton', function() {
+      // get the current row
+      var currentRow = $(this).closest("tr");
+
+      var col1 = currentRow.find("td:eq(0)").html(); // get current row 1st table cell TD value
+      var col2 = currentRow.find("td:eq(1)").html(); // get current row 2nd table cell TD value
+      var col3 = currentRow.find("td:eq(2)").html(); // get current row 3rd table cell  TD value
+      var data = col1 + "\n" + col2 + "\n" + col3;
+
+      Swal.fire({
+      title: 'Are you sure?',
+      icon: 'question',
+      text: 'Delete ' + col2 + ' -- ' + col3,
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirm'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        var table = $('#manage_table').DataTable();
+
+        table.row( $(this).parents('tr') )
+        .remove()
+        .draw();
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Deletion Success',
+        })
+      }
+    })
+    });
+  });
+
+
+
+
+$(document).ready(function(){
   $("#sign_out").click(function(){
     Swal.fire({
       title: 'Are you sure?',
-      text: 'signing out from Admin Account...',
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
