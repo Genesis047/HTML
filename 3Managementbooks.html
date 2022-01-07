@@ -45,11 +45,11 @@
     }
 
     img{ 
-  display: block; 
-  margin: 0vw; 
-  width: 10vw; !important; 
-  height: 10vw !important;
-}
+      display: block; 
+      margin: 0vw; 
+      width: 10vw; !important; 
+      height: 10vw !important;
+    }
 
     .table_page {
       padding-top: 2rem;
@@ -61,16 +61,16 @@
       color: white;
       padding: 12px 28px;
       border-radius: 4px;
-      text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
     }
 
-  .removeButton span.icon {
-      background: url(imgs/icon.png) no-repeat;
-      float: left;
-  }
+
+      button.btn.remove::before {
+      font-family: fontAwesome;
+      content: "\f014\00a0";
+    }
     @media screen and (max-width: 720px) {
     .table{
       display: block;

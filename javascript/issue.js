@@ -14,11 +14,11 @@ $(document).ready(function(){
 });
 
 
-$(document).ready(function() {
-
   //$(".zz-modal").click(function() {
   //  $("#con-close-modal").modal('show');
   //});
+$(document).ready(function() {
+
 
   $('#myModal').on('show.bs.modal', function(e) {
       console.log(e);
@@ -38,6 +38,7 @@ $(document).ready(function() {
       $(this).find(".mbook_author").val(_author);
       $(this).find(".mborrow").val(_borrower);
       $(this).find(".mexp_date").val(_pubdate);
+      
   });
 
 });
@@ -46,6 +47,7 @@ $(document).ready(function(){
   $("#sign_out").click(function(){
     Swal.fire({
       title: 'Are you sure?',
+      text: 'signing out from Admin Account...',
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

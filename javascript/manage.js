@@ -50,7 +50,7 @@ $(document).ready(function() {
                       start,
                       isbn,
                       'Available',
-                      "<button class='removeButton'><span class='icon'></span>Remove</button>"
+                      "<button class='btn remove btn-danger px-3 text-center'></button>"
               ]).draw();;
               }
     } );
@@ -58,22 +58,27 @@ $(document).ready(function() {
 
 
 $(document).ready(function(){
-     $("#manage_table").on('click', '.removeButton', function() {
+     $("#manage_table").on('click', '.remove', function() {
       // get the current row
       var currentRow = $(this).closest("tr");
 
       var col1 = currentRow.find("td:eq(0)").html(); // get current row 1st table cell TD value
       var col2 = currentRow.find("td:eq(1)").html(); // get current row 2nd table cell TD value
       var col3 = currentRow.find("td:eq(2)").html(); // get current row 3rd table cell  TD value
+      var col4 = currentRow.find("td:eq(3)").html(); // get current row 4st table cell TD value
+      var col5 = currentRow.find("td:eq(4)").html(); // get current row 5nd table cell TD value
+      var col6 = currentRow.find("td:eq(5)").html(); // get current row 6rd table cell  TD value
+      
       var data = col1 + "\n" + col2 + "\n" + col3;
+
 
       Swal.fire({
       title: 'Are you sure?',
       icon: 'question',
       text: 'Delete ' + col2 + ' -- ' + col3,
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
       confirmButtonText: 'Confirm'
     }).then((result) => {
       if (result.isConfirmed) {
