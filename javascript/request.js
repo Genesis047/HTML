@@ -67,6 +67,8 @@ $(document).ready(function() {
       $(this).find(".mbook_author").val(_author);
       $(this).find(".mname").val(_name);
       $(this).find(".mid").val(_id);
+
+      
   });
 
 });

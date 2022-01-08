@@ -44,7 +44,7 @@ $(document).ready(function() {
                 text: 'Book added successfuly!',
               })
               table.row.add([
-                      'image',
+                      image,
                       titlebook,
                       author,
                       start,

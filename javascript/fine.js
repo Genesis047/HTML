@@ -34,9 +34,24 @@ $(document).ready(function() {
       $(this).find(".mname").val(_name);
       $(this).find(".mfine").val(_fine);
       $(this).find(".mreason").val(_reason);
+      
+      var disableButton = (e) => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Paid Done',
+            text: 'Payment paid successfully!',
+          })
+          console.log("va");
+          $('#myModal').modal('toggle'); 
+          $(_button).prop('disabled', true);
+      };
+
+      $(document).on('click', '#disable_button', disableButton);
   });
 
 });
+
+
 
 $(document).ready(function(){
   $("#sign_out").click(function(){
