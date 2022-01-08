@@ -90,6 +90,8 @@ function validateForm(row, title, author, borrower, pubdate) {
         title: 'Book Transaction success',
       }).then(function() {
           document.getElementById("issue_table").deleteRow((row+1))
+          var data = title + author + borrower + pubdate + start + fine + reason
+          alert(data)
         });
     }
 
