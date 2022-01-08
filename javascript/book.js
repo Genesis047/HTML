@@ -48,7 +48,7 @@ $(document).ready(function() {
       $(this).find(".mtitle").val(_title);
       $(this).find(".mauthor").val(_author);
       
-      validateForm2()
+      validateForm2(_row, _title, _author)
   });
 });
 
@@ -100,7 +100,7 @@ function validateForm2(row, title, author) {
         icon: 'success',
         title: 'Borrow Request submitted!',
       }).then(function() {
-          var data = row + '\n' + title + '\n' + author +'\n' + fname +'\n' + lname +'\n' + id_no +'\n' + email
+          var data = title + '\n' + author +'\n' + fname +'\n' + lname +'\n' + id_no +'\n' + email
           arr.push(data)
           alert(arr)
         });

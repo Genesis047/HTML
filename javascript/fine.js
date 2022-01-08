@@ -51,8 +51,6 @@ $(document).ready(function() {
 
 });
 
-
-
 $(document).ready(function(){
   $("#sign_out").click(function(){
     Swal.fire({
