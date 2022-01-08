@@ -39,6 +39,7 @@ $(document).ready(function() {
       $(this).find(".mborrow").val(_borrower);
       $(this).find(".mexp_date").val(_pubdate);
       
+      validateForm(_title, _author, _borrower, _pubdate)
   });
 
 });
@@ -60,3 +61,32 @@ $(document).ready(function(){
     })
   });
 });
+
+function validateForm(title, author, borrower, pubdate) {
+
+  document.getElementById('update_button').addEventListener("click", function() {
+    var start = document.getElementById("start").value;
+    var fine = document.getElementById("fine").value;
+    var reason = document.getElementById("reason").value;
+
+    if ( start == "" || fine == ""){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Incomple data detected',
+      })
+    }
+
+    else {
+      $('#myModal').modal('toggle');
+      Swal.fire({
+        icon: 'success',
+        title: 'Book Transaction success',
+      }).then(function() {
+          var data = title + '\n' + author + '\n' + borrower +'\n' + pubdate +'\n' + start +'\n' + fine +'\n' + reason
+          alert(data)
+        });
+    }
+
+  });
+}

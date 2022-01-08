@@ -10,7 +10,11 @@ $(document).ready(function() {
  
 
 $(document).ready(function(){
-    $('[data-bs-toggle="tooltip"]').tooltip();   
+    $('[data-bs-toggle="tooltip"]').tooltip();
+
+    $('#myModal').on('hidden.bs.modal', function () {
+      $(this).find('form').trigger('reset');
+    });   
 });
 
 
@@ -36,9 +40,12 @@ $(document).ready(function() {
       $(this).find(".mname").val(_name);
       $(this).find(".mid").val(_id);
       $(this).find(".mreq_d").val(_date_req);
+       
+      validateForm(_title, _author, _name, _id, _date_req)
   });
 
 });
+
 
 $(document).ready(function() {
 
@@ -64,6 +71,7 @@ $(document).ready(function() {
 
 });
 
+
 $(document).ready( function() {
     var now = new Date();
     var today = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
@@ -86,3 +94,34 @@ $(document).ready(function(){
     })
   });
 });
+
+var arr = [];
+
+function validateForm(title, author, name, id) {
+  document.getElementById('approve_request').addEventListener("click", function() {
+
+    var issue = document.getElementById("issue_d").value;
+    var exp = document.getElementById("exp_d").value;
+
+    if ( issue == "" || exp == ""){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Incomple data detected',
+      })
+    }
+
+    else {
+      $('#myModal').modal('toggle');
+      Swal.fire({
+        icon: 'success',
+        title: 'Book Transaction success',
+      }).then(function() {
+          var data = [title + '\n' + author + '\n' + name +'\n' + id +'\n' + issue +'\n' + exp]
+          arr.push([data])
+          alert(arr)
+        });
+    }
+
+  });
+}

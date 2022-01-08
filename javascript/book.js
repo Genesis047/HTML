@@ -29,11 +29,36 @@ $(document).ready(function(){
  $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
  });
 
+
+$(document).ready(function() {
+
+
+  $('#myModalBorrow').on('show.bs.modal', function(e) {
+      console.log(e);
+      console.log(e.relatedTarget);
+
+
+      var _button = $(e.relatedTarget); // Button that triggered the modal
+
+       // console.log(_button, _button.parents("tr"));
+      var _row = _button.parents("tr");
+      var _title = _row.find(".book_title").text();
+      var _author = _row.find(".book_author").text();
+
+      $(this).find(".mtitle").val(_title);
+      $(this).find(".mauthor").val(_author);
+      
+      validateForm2()
+  });
+});
+
+
 function validateForm() {
   var username = document.getElementById("email").value;
   var password = document.getElementById("password").value;
   
   if ( username == "Admin" && password == "admin123"){
+   $('#myModal').modal('toggle');
     Swal.fire({
       icon: 'success',
       title: 'Login Success',
@@ -53,27 +78,33 @@ function validateForm() {
 
 }
 
+var arr = []
+function validateForm2(row, title, author) {
+  document.getElementById('add_borrow').addEventListener("click", function() {
+    var fname= document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var id_no = document.getElementById("id_no").value;
+    var email = document.getElementById("email_add").value;
 
-$(document).ready(function() {
+    if ( fname == "" || lname == "" || id_no == "" || email == ""){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Incomple data detected',
+      })
+    }
 
-  //$(".zz-modal").click(function() {
-  //  $("#con-close-modal").modal('show');
-  //});
+    else {
+      $('#myModalBorrow').modal('toggle');
+      Swal.fire({
+        icon: 'success',
+        title: 'Borrow Request submitted!',
+      }).then(function() {
+          var data = row + '\n' + title + '\n' + author +'\n' + fname +'\n' + lname +'\n' + id_no +'\n' + email
+          arr.push(data)
+          alert(arr)
+        });
+    }
 
-  $('#myModalBorrow').on('show.bs.modal', function(e) {
-      console.log(e);
-      console.log(e.relatedTarget);
-
-
-      var _button = $(e.relatedTarget); // Button that triggered the modal
-
-       // console.log(_button, _button.parents("tr"));
-      var _row = _button.parents("tr");
-      var _title = _row.find(".book_title").text();
-      var _author = _row.find(".book_author").text();
-
-      $(this).find(".mtitle").val(_title);
-      $(this).find(".mauthor").val(_author);
   });
-
-});
+}

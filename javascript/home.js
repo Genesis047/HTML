@@ -12,6 +12,7 @@ function validateForm() {
   var password = document.getElementById("password").value;
   
   if ( username == "Admin" && password == "admin123"){
+    $('#myModal').modal('toggle'); 
     Swal.fire({
       icon: 'success',
       title: 'Login Success',

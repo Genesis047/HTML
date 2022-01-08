@@ -266,7 +266,7 @@
 
               <div class="form-group">
                 <label for="start">Expiration of Borrow</label>
-                <input type="date" class="form-control" id="issue_d" name="trip-start" min="1980-01-01" max="2022-12-31">
+                <input type="date" class="form-control" id="exp_d" name="trip-start" min="1980-01-01" max="2022-12-31">
               </div>
             </form>
           </div>
@@ -274,7 +274,7 @@
           <!---------Modal Footer------------>
           <div class="modal-footer border-0">
             <input class="btn btn-secondary" type="submit" data-bs-dismiss="modal" value="Cancel">
-            <input class="btn btn-success" type="submit" value="Approve">
+            <button class="btn update btn-success" id="approve_request" type="button" value="Update">Approve</button>
           </div>
 
         </div>
