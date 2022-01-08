@@ -10,7 +10,11 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
-    $('[data-bs-toggle="tooltip"]').tooltip();   
+    $('[data-bs-toggle="tooltip"]').tooltip(); 
+
+    $('#myModal').on('hidden.bs.modal', function () {
+      $(this).find('form').trigger('reset');
+    });  
 });
 
 
@@ -29,6 +33,8 @@ $(document).ready(function() {
 
        // console.log(_button, _button.parents("tr"));
       var _row = _button.parents("tr");
+      var _rowin = _button.parents("tr").index();
+
       var _title = _row.find(".book_title").text();
       var _author = _row.find(".book_author").text();
       var _borrower = _row.find(".borrower").text();
@@ -39,7 +45,7 @@ $(document).ready(function() {
       $(this).find(".mborrow").val(_borrower);
       $(this).find(".mexp_date").val(_pubdate);
       
-      validateForm(_title, _author, _borrower, _pubdate)
+      validateForm(_rowin,_title, _author, _borrower, _pubdate)
   });
 
 });
@@ -62,7 +68,7 @@ $(document).ready(function(){
   });
 });
 
-function validateForm(title, author, borrower, pubdate) {
+function validateForm(row, title, author, borrower, pubdate) {
 
   document.getElementById('update_button').addEventListener("click", function() {
     var start = document.getElementById("start").value;
@@ -83,8 +89,7 @@ function validateForm(title, author, borrower, pubdate) {
         icon: 'success',
         title: 'Book Transaction success',
       }).then(function() {
-          var data = title + '\n' + author + '\n' + borrower +'\n' + pubdate +'\n' + start +'\n' + fine +'\n' + reason
-          alert(data)
+          document.getElementById("issue_table").deleteRow((row+1))
         });
     }
 

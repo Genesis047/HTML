@@ -44,7 +44,7 @@ $(document).ready(function() {
                 text: 'Book added successfuly!',
               })
               table.row.add([
-                      image,
+                      'image',
                       titlebook,
                       author,
                       start,
@@ -67,7 +67,7 @@ $(document).ready(function(){
       var col3 = currentRow.find("td:eq(2)").html(); // get current row 3rd table cell  TD value
       var col4 = currentRow.find("td:eq(3)").html(); // get current row 4st table cell TD value
       var col5 = currentRow.find("td:eq(4)").html(); // get current row 5nd table cell TD value
-      var col6 = currentRow.find("td:eq(5)").html(); // get current row 6rd table cell  TD value
+      var col6 = currentRow.find("td:eq(5)").html(); // get current row rd table cell  TD value
       
       var data = col1 + "\n" + col2 + "\n" + col3;
 

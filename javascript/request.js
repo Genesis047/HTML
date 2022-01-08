@@ -29,6 +29,8 @@ $(document).ready(function() {
 
        // console.log(_button, _button.parents("tr"));
       var _row = _button.parents("tr");
+      var _rowin = _button.parents("tr").index();
+
       var _title = _row.find(".book_title").text();
       var _author = _row.find(".book_author").text();
       var _name = _row.find(".name").text();
@@ -41,7 +43,7 @@ $(document).ready(function() {
       $(this).find(".mid").val(_id);
       $(this).find(".mreq_d").val(_date_req);
        
-      validateForm(_title, _author, _name, _id, _date_req)
+      validateForm(_rowin, _title, _author, _name, _id, _date_req)
   });
 
 });
@@ -58,6 +60,9 @@ $(document).ready(function() {
 
        // console.log(_button, _button.parents("tr"));
       var _row = _button.parents("tr");
+
+      var _rowin = _button.parents("tr").index();
+
       var _title = _row.find(".book_title").text();
       var _author = _row.find(".book_author").text();
       var _name = _row.find(".name").text();
@@ -68,9 +73,19 @@ $(document).ready(function() {
       $(this).find(".mname").val(_name);
       $(this).find(".mid").val(_id);
 
-      
-  });
+    var removeitem = (e) => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Rejected',
+          text: 'Rejection success!',
+        })
+        $('#myModal2').modal('toggle');
+        document.getElementById("request_table").deleteRow((_rowin + 1));
+    };
 
+    $(document).on('click', '#reject-request', removeitem);
+
+  });
 });
 
 
@@ -99,7 +114,7 @@ $(document).ready(function(){
 
 var arr = [];
 
-function validateForm(title, author, name, id) {
+function validateForm(row, title, author, name, id) {
   document.getElementById('approve_request').addEventListener("click", function() {
 
     var issue = document.getElementById("issue_d").value;
@@ -117,8 +132,11 @@ function validateForm(title, author, name, id) {
       $('#myModal').modal('toggle');
       Swal.fire({
         icon: 'success',
-        title: 'Book Transaction success',
+        title: 'Approval',
+        text: 'Aprove success!'
       }).then(function() {
+
+          document.getElementById("request_table").deleteRow((row+1))
           var data = [title + '\n' + author + '\n' + name +'\n' + id +'\n' + issue +'\n' + exp]
           arr.push([data])
           alert(arr)
