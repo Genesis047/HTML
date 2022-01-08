@@ -21,7 +21,8 @@ $(document).ready(function() {
 
     $('#addRow').on( 'click', function () {
             var table = $('#manage_table').DataTable();
-
+            
+            var image = document.getElementById("img").value;
             var titlebook = document.getElementById("titlebook").value;
             var author = document.getElementById("author").value;
             var start = document.getElementById("start").value;
@@ -44,7 +45,7 @@ $(document).ready(function() {
                 text: 'Book added successfuly!',
               })
               table.row.add([
-                      'image',
+                      image,
                       titlebook,
                       author,
                       start,
