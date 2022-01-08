@@ -14,6 +14,7 @@ $(document).ready(function(){
 });
 
 
+//Add books
 $(document).ready(function() {
     $('#myModal').on('hidden.bs.modal', function () {
       $(this).find('form').trigger('reset');
@@ -28,7 +29,7 @@ $(document).ready(function() {
             var start = document.getElementById("start").value;
             var isbn = document.getElementById("isbn").value;
 
-            if ( titlebook == "" || author == "" || start == "" || isbn == ""){
+            if ( image=="" || titlebook == "" || author == "" || start == "" || isbn == ""){
               Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
@@ -58,6 +59,8 @@ $(document).ready(function() {
 } );
 
 
+
+//Remove books
 $(document).ready(function(){
      $("#manage_table").on('click', '.remove', function() {
       // get the current row
@@ -100,7 +103,7 @@ $(document).ready(function(){
 
 
 
-
+//sign out
 $(document).ready(function(){
   $("#sign_out").click(function(){
     Swal.fire({

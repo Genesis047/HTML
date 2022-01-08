@@ -18,6 +18,7 @@ $(document).ready(function(){
 });
 
 
+//approval
 $(document).ready(function() {
 
   $('#myModal').on('show.bs.modal', function(e) {
@@ -49,6 +50,7 @@ $(document).ready(function() {
 });
 
 
+//rejection
 $(document).ready(function() {
 
   $('#myModal2').on('show.bs.modal', function(e) {
@@ -78,7 +80,7 @@ $(document).ready(function() {
   });
 });
 
-
+//function for rejection
 function validateForm2(row, title, author, name, id) {
   document.getElementById('reject-request').addEventListener("click", function() {
     if ( title == "" || author == "" || name == "" || id == ""){
@@ -105,6 +107,7 @@ function validateForm2(row, title, author, name, id) {
   });
 }
 
+//function for approval
 function validateForm(row2, title, author, name, id) {
   document.getElementById('approve_request').addEventListener("click", function() {
 
@@ -136,12 +139,14 @@ function validateForm(row2, title, author, name, id) {
   });
 }
 
+//restarts datetime
 $(document).ready( function() {
     var now = new Date();
     var today = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
     $('#issue_d').val(today);
 });
 
+//sign out
 $(document).ready(function(){
   $("#sign_out").click(function(){
     Swal.fire({

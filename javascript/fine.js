@@ -14,6 +14,7 @@ $(document).ready(function(){
 });
 
 
+//disable button after modal shown
 $(document).ready(function() {
 
   $('#myModal').on('show.bs.modal', function(e) {
@@ -51,6 +52,7 @@ $(document).ready(function() {
 
 });
 
+//sign out
 $(document).ready(function(){
   $("#sign_out").click(function(){
     Swal.fire({

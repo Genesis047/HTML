@@ -14,6 +14,8 @@ $(document).ready(function() {
  });
 });
 
+
+//remove modal input when restart
 $(document).ready(function(){
    $('#myModal').on('hidden.bs.modal', function () {
       $(this).find('form').trigger('reset');
@@ -25,11 +27,14 @@ $(document).ready(function(){
 });
 
 
- $(window).scroll(function(){
- $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
- });
+//navbar transparency transition
+$(window).scroll(function(){
+   $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+});
 
 
+
+//modal 
 $(document).ready(function() {
 
 
@@ -52,7 +57,37 @@ $(document).ready(function() {
   });
 });
 
+//student input validate
+function validateForm2(row, title, author) {
+  document.getElementById('add_borrow').addEventListener("click", function() {
+    var fname= document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var id_no = document.getElementById("id_no").value;
+    var email = document.getElementById("email_add").value;
 
+    if ( fname == "" || lname == "" || id_no == "" || email == ""){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Incomple data detected',
+      })
+    }
+
+    else {
+      $('#myModalBorrow').modal('toggle');
+      Swal.fire({
+        icon: 'success',
+        title: 'Borrow Request submitted!',
+      }).then(function() {
+          var data = title + '\n' + author +'\n' + fname +'\n' + lname +'\n' + id_no +'\n' + email
+          alert(data)
+        });
+    }
+
+  });
+}
+
+//login validation
 function validateForm() {
   var username = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -76,35 +111,4 @@ function validateForm() {
     })
   }
 
-}
-
-var arr = []
-function validateForm2(row, title, author) {
-  document.getElementById('add_borrow').addEventListener("click", function() {
-    var fname= document.getElementById("fname").value;
-    var lname = document.getElementById("lname").value;
-    var id_no = document.getElementById("id_no").value;
-    var email = document.getElementById("email_add").value;
-
-    if ( fname == "" || lname == "" || id_no == "" || email == ""){
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Incomple data detected',
-      })
-    }
-
-    else {
-      $('#myModalBorrow').modal('toggle');
-      Swal.fire({
-        icon: 'success',
-        title: 'Borrow Request submitted!',
-      }).then(function() {
-          var data = title + '\n' + author +'\n' + fname +'\n' + lname +'\n' + id_no +'\n' + email
-          arr.push(data)
-          alert(arr)
-        });
-    }
-
-  });
 }

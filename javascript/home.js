@@ -7,6 +7,7 @@ $(document).ready(function(){
 });
 
 
+//login validation
 function validateForm() {
   var username = document.getElementById("email").value;
   var password = document.getElementById("password").value;

@@ -21,6 +21,8 @@ $(document).ready(function(){
   //$(".zz-modal").click(function() {
   //  $("#con-close-modal").modal('show');
   //});
+
+//Book transaction
 $(document).ready(function() {
 
 
@@ -48,24 +50,6 @@ $(document).ready(function() {
       validateForm(_rowin,_title, _author, _borrower, _pubdate)
   });
 
-});
-
-$(document).ready(function(){
-  $("#sign_out").click(function(){
-    Swal.fire({
-      title: 'Are you sure?',
-      text: 'signing out from Admin Account...',
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Confirm'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        window.location = "1Home.html"
-      }
-    })
-  });
 });
 
 function validateForm(row, title, author, borrower, pubdate) {
@@ -97,3 +81,21 @@ function validateForm(row, title, author, borrower, pubdate) {
 
   });
 }
+
+$(document).ready(function(){
+  $("#sign_out").click(function(){
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'signing out from Admin Account...',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirm'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location = "1Home.html"
+      }
+    })
+  });
+});
