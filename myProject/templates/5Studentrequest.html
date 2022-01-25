@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!----------Google font link----------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+  <!--------------Box icon link----------------->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <!------------Icon Library----------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-------------Data Table---------------->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+  <!-------Sweetalert2------------------------------------->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/request.css">
+  <script type="text/javascript" src="javascript/request.js"></script>
+
+  <link rel = "icon" href="images/logo.svg" type = "image/svg">
+  <title>Student Request</title>
+	
+</head>
+<body>
+
+	<!----------------Sidenar-------------------->
+  	<div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+	  <div class="offcanvas-header">
+	      <h4 class="offcanvas-title d-none d-sm-block" id="offcanvas">ADMIN</h4>
+	      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	  </div>
+	  <div class="offcanvas-body px-0">
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+              <li class="nav-item">
+                  <a href="3Managementbooks.html" class="nav-link text-truncate" data-bs-toggle="tooltip" title="Manage Books">
+                      <i class="fs-5 bi-gear"></i><span class="ms-1 d-none d-sm-inline">Manage Books</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="4BookIssue.html" class="nav-link text-truncate" data-bs-toggle="tooltip" title="Book Issue">
+                      <i class="fs-5 bi-journal"></i><span class="ms-1 d-none d-sm-inline">Book Issue</span> </a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link text-truncate" data-bs-toggle="tooltip" title="Book Return">
+                      <i class="fs-5 bi-calendar-check"></i><span class="ms-1 d-none d-sm-inline">Book Return</span></a>
+              </li>
+              <li>
+                  <a href="7BookFine.html" class="nav-link text-truncate" data-bs-toggle="tooltip" title="Book Fine">
+                      <i class="fs-5 bi-wallet"></i><span class="ms-1 d-none d-sm-inline">Book Fine</span></a>
+              </li>
+              <li>
+                  <a href="5Studentrequest.html" class="nav-link text-truncate" data-bs-toggle="tooltip" title="Student Request">
+                      <i class="fs-5 bi-ui-checks"></i><span class="ms-1 d-none d-sm-inline">Student Request</span></a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link text-truncate" data-bs-toggle="tooltip" title="Sign Out" id="sign_out">
+                      <i class="fs-5 bi-box-arrow-right"></i><span class="ms-1 d-none d-sm-inline">Sign out</span></a>
+              </li>
+          </ul>
+	  </div>
+	</div>
+
+ 	<!----------Content---------------->
+ 	<div class="container-fluid content">
+		<div class="row">
+		  	<div class="col min-vh-100 p-4">
+
+		      <div class="row">
+
+		        <div class="col">
+		          <h1>BOOK REQUEST</h1>
+		        </div>
+
+		        <div class="col">
+		          <button class="btn float-end has-tooltip" title="Sidebar" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+		            <i class="fs-2 bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+		          </button>
+		        </div>
+		      </div>
+
+		      <div class="row table_page">
+		        <div class="col table-responsive">
+				      <table id="request_table" class="table table-hover table-borderless" style="width: 100%;">
+				        <thead>
+							    <tr>
+							    	<th>Student Name</th>
+								    <th>TUPC ID</th>
+								    <th>Email Address</th>
+								    <th>Book Title</th>
+								    <th>Author</th>
+										<th>Date Requested</th>
+										<th class="no-sort">Select</th>
+								    </tr>
+							    </thead>
+
+							    <tr>
+							    	<td class="name">Genesis Mislos</td>
+							      <td class="id">190078</td>
+								    <td class="email">genesis.mislos@gmail.com</td>
+								    <td class="book_title">Physical Education</td>
+								    <td class="book_author">Christian Martinez</td>
+										<td class="date_req">10/24/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+
+							    <tr>
+							    	<td class="name">Ryan Dela Cruz</td>
+							      <td class="id">190243</td>
+							      <td class="email">ryan@gmail.com</td>
+							      <td class="book_title">Entrepreneurship</td>
+							      <td class="book_author">Christian Martinez</td>
+								  	<td class="date_req">10/24/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+
+							    <tr>
+							    	<td class="name">Crisanto Areglado</td>
+							      <td class="id">190089</td>
+							      <td class="email">crisanto@gmail.com</td>
+							      <td class="book_title">Social Science</td>
+							      <td class="book_author">Christian Martinez</td>
+								  	<td class="date_req">10/24/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>							    
+							    <tr>
+							    	<td class="name">Kevin Hailey</td>
+							      <td class="id">190023</td>
+							      <td class="email">kevin@gmail.com</td>
+							      <td class="book_title">Hekasi</td>
+							      <td class="book_author">Francisco Romero</td>
+								  	<td class="date_req">11/24/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+							    <tr>
+							    	<td class="name">Mark Tiu</td>
+							      <td class="id">190190</td>
+							      <td class="email">mark@gmail.com</td>
+							      <td class="book_title">ESP</td>
+							      <td class="book_author">Wilson Poe</td>
+								  	<td class="date_req">11/18/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+							    <tr>
+							    	<td class="name">Jake Kilua</td>
+							      <td class="id">190123</td>
+							      <td class="email">jake@gmail.com</td>
+							      <td class="book_title">Basic Calculus</td>
+							      <td class="book_author">Matthew Go</td>
+								  	<td class="date_req">12/03/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+							    <tr>
+							    	<td class="name">Jessieca M.</td>
+							      <td class="id">190143</td>
+							      <td class="email">Jessieca@gmail.com</td>
+							      <td class="book_title">C++</td>
+							      <td class="book_author">Solomon</td>
+								  	<td class="date_req">12/04/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+							    <tr>
+							    	<td class="name">Mike Tyson</td>
+							      <td class="id">190291</td>
+							      <td class="email">mike@gmail.com</td>
+							      <td class="book_title">Python</td>
+							      <td class="book_author">Vanessa Hernandez</td>
+								  	<td class="date_req">11/28/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+							    <tr>
+							    	<td class="name">Alexander Ping</td>
+							      <td class="id">190176</td>
+							      <td class="email">Alexander@gmail.com</td>
+							      <td class="book_title">JavaScript</td>
+							      <td class="book_author">Drake Joshua</td>
+								  	<td class="date_req">11/30/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+							    <tr>
+							    	<td class="name">Raul Pogi</td>
+							      <td class="id">190166</td>
+							      <td class="email">raul@gmail.com</td>
+							      <td class="book_title">CSS</td>
+							      <td class="book_author">Patrick Partida</td>
+								  	<td class="date_req">11/23/21</td>
+								  	<td class="action text-center"><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-hand-thumbs-up"></i></button>
+								  		<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal2"><i class="bi bi-hand-thumbs-down"></i></button></td>
+							    </tr>
+
+
+							  </table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+  </div>
+
+ 	<!------------Modal pop up form----------->
+  <div class="container-fluid">
+    <div class="modal fade" id=myModal>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Approve Request</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="title">Book Title</label>
+                <input type="text" class="form-control mbook_title" id="title" name="title" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="author">Book Author</label>
+                <input type="text" class="form-control mbook_author" id="author" name="author" disabled>
+              </div>
+
+              <div class="form-group">
+               	<label for="name">Student Name</label>
+               	<input type="text" class="form-control mname" id="name" name="name" disabled>
+              </div>
+
+              <div class="form-group">
+               	<label for="tup_id">TUPC-ID</label>
+               	<input type="text" class="form-control mid" id="tup_id" name="tup_id" disabled>
+              </div>
+
+              <div class="form-group">
+                	<label for="req_d">Date Requested</label>
+               	<input type="text" class="form-control mreq_d" id="req_d" name="req_d" disabled>
+              </div>
+
+	            <div class="form-group">
+	              <label for="issue_d">Issue Date</label>
+	              <input type="date" class="form-control" id="issue_d" name="trip-start" min="1980-01-01" max="2022-12-31">
+	            </div>
+
+              <div class="form-group">
+                <label for="start">Expiration of Borrow</label>
+                <input type="date" class="form-control" id="exp_d" name="trip-start" min="1980-01-01" max="2022-12-31">
+              </div>
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <input class="btn btn-secondary" type="submit" data-bs-dismiss="modal" value="Cancel">
+            <button class="btn update btn-success" id="approve_request" type="button" value="Update">Approve</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->
+
+
+	<!------------Modal pop up form----------->
+  <div class="container-fluid">
+    <div class="modal fade" id=myModal2>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Reject Request</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="title">Book Title</label>
+                <input type="text" class="form-control mbook_title" id="title" name="title" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="author">Book Author</label>
+                <input type="text" class="form-control mbook_author" id="author" name="author" disabled>
+              </div>
+
+              <div class="form-group">
+               	<label for="name">Student Name</label>
+               	<input type="text" class="form-control mname" id="name" name="name" disabled>
+              </div>
+
+              <div class="form-group">
+               	<label for="tup_id">TUPC-ID</label>
+               	<input type="text" class="form-control mid" id="tup_id" name="tup_id" disabled>
+              </div>
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <input class="btn btn-secondary" type="submit" data-bs-dismiss="modal" value="Cancel">
+            <input class="btn btn-danger" type="submit" id="reject-request" value="Reject">
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->
+
+
+
+
+  <!-------------Bootstrap js--------------------->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!----------Google font link----------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
+  <!----------boxicon-------------->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!------------js query----------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-------Sweetalert2------------------------------------->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <link rel = "icon" href="images/logo.svg" type = "image/svg">
+  <title>The Library</title>
+
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <script type="text/javascript" src="javascript/home.js"></script>
+  
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  <!-------TUPC Logo------>
+
+  <!----Creating Navbar------>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-book" style="padding-right: 1rem;"></i>The Library</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Content">
+          <ul class="navbar-nav nav-link ms-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="6Books.html">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#step">Steps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link button" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Login</a>
+            </li>            
+          </ul>
+        </div>
+    </div>
+  </nav> <!---Navbar code ends here---->
+
+
+  <!------Contents for the homepage: Intro-->
+  <div class="home container-fluid" id="home">
+      
+    <div class="row home_row">
+      <div class="col-md-6 intro_text" style="padding-left: 4.5rem;">
+        <h1>A simple Library System</h1>
+        <h5>Discover a new chapter of your favourite book. Don't miss them out!</h5>
+        <a href="6Books.html"><button class="btn">Read now</button></a>
+      </div>
+
+      <div class="col-md-6 intro_photo text-center">
+        <img src="images/undraw_reading_time_gvg0.svg" class="img-fluid">
+      </div>
+
+
+    </div>
+  </div>
+
+    <!-- Step Section -->
+    <section id="step">
+        <div class="container-fluid step_content">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="section-title">
+                        <h2 class="text-center">How it works?</h2>
+                        <p class="text-center"><i>“A reader lives a thousand lives before he dies..."</i></p>
+                    </div>
+                    <hr class="border-white mb-4 mt-4">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_file_searching_re_3evy.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>1. Search a book</h3>
+                    </figure>
+                </div>
+
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_add_files_re_v09g.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>2. Submit a request form </h3>
+                    </figure>
+                </div>
+
+                <div class="col-md-4">
+                    <figure class="work-process text-center">
+                      <img src="images/undraw_pull_request_gld8.svg" class="img-fluid img-responsive rounded-circle">
+                      <h3>3. Wait for confirmation</h3>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Workflow Section -->
+    
+  <!-------About--------------------------->
+  <div class="container-fluid display_3" id="About">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="about-title">
+                <h2 class="text-center" style="font-weight: bold; font-family: 'Montserrat', monospace;">Our Team</h2>
+                <p class="text-center"><i>“When ‘I’ is replaced with ‘We’, even the illness becomes wellness.” – Malcolm X</i></p>
+            </div>
+            <hr class="border-white mb-4 mt-4">
+        </div>
+        <div class="col-md-4 col-lg-4 d-flex justify-content-center">
+            <!-- Bootstrap 5 card box -->
+            <div class="card-box">
+                <div class="card-thumbnail">
+                    <img src="images/undraw_male_avatar_323b.svg" class="img-fluid" alt="">
+                </div>
+                <div class="card-content pt-3">
+                  <h3 class="text-center">Julius Areglado</h3>
+                  <p class="text-center">"Sometimes you have to lose all you have to find out who you truly are.”</p>
+                  <p><i class="bi bi-telephone-fill"></i>09-045-539-793</p>
+                  <p><i class="bi bi-geo-alt-fill"></i>Cavite City, Philippines</p>   
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 d-flex justify-content-center">
+            <!-- Bootstrap 5 card box -->
+            <div class="card-box">
+                <div class="card-thumbnail">
+                    <img src="images/undraw_male_avatar_323b.svg" class="img-fluid" alt="">
+                </div>
+                <div class="card-content pt-3">
+                  <h3 class="text-center">Ryan Dela Cruz</h3>
+                  <p class="text-center">"Sometimes you have to lose all you have to find out who you truly are.”</p>
+                  <p><i class="bi bi-telephone-fill"></i>09-045-539-793</p>
+                  <p><i class="bi bi-geo-alt-fill"></i>Cavite City, Philippines</p>   
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 d-flex justify-content-center">
+            <!-- Bootstrap 5 card box -->
+            <div class="card-box">
+                <div class="card-thumbnail">
+                    <img src="images/undraw_male_avatar_323b.svg" class="img-fluid" alt="">
+                </div>
+                <div class="card-content pt-3">
+                  <h3 class="text-center">Genesis Mislos</h3>
+                  <p class="text-center">"Sometimes you have to lose all you have to find out who you truly are.”</p>
+                  <p><i class="bi bi-telephone-fill"></i>09-045-539-793</p>
+                  <p><i class="bi bi-geo-alt-fill"></i>Cavite City, Philippines</p>   
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!------------Modal pop up form----------->
+  <div class="container-fluid">
+    <div class="modal fade" id=myModal>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--------Modal Header------>
+          <div class="modal-header border-0">
+            <h2 class="modal-title">Admin Login</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!---------Modal Body------------>
+          <div class="modal-body">
+            <form id="form">
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                  </div>
+
+                  <input type="email" class="form-control" id="email" aria-describedby="emailtext" placeholder="Enter Email">
+                </div>
+                <small id="emailtext" class="form-text text-muted">Never share your email to anyone</small>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <!---------Modal Footer------------>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-primary" value="Login" onclick="validateForm()">Login</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>    
+  </div> <!-------------Modal code ends here----->
+
+  <!----------footer----------->
+  <div class="mt-5 pt-5 pb-2 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-xs-12 about-company">
+          <h2><i class="bi bi-book" style="padding-right: 1rem;"></i>The Library</h2>
+          <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+          <p><a href="https://www.facebook.com/TUPian" target="blank"><i class="bi bi-facebook p-1"></i></a>
+             <a href="#"><i class="bi bi-linkedin p-1"></i></a>
+             <a href="#"><i class="bi bi-youtube p-1"></i></a>
+             <a href=""><i class="bi bi-twitter"></i></a>
+          </p>
+        </div>
+        <div class="col-lg-5 col-xs-12 location">
+          <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+          <p><i class="bi bi-geo-alt"></i>Carlos Trinidad Ave, Salawag, Dasmarinas, Cavite</p>
+          <h4 class="mt-lg-0 mt-sm-4 mb-0">Contacts</h4>
+          <p class="mb-0"><i class="bi bi-telephone"></i>046 2347561</p>
+          <p><i class="bi bi-envelope"></i>cavite@tup.edu.ph</p>
+        </div>
+      </div>
+
+      <div class="row p-0">
+        <div class="col-lg-12 col-xs-12 app_icon">
+          <p class="text">Powered by</p>
+          <p><i class='bx bxl-bootstrap'></i></p>
+          <p><i class='bx bxl-javascript'></i></p>
+          <p><i class='bx bxl-css3'></i></p>
+          <p><i class='bx bxl-jquery'></i></p>
+          <p><i class='bx bxl-github' ></i></p>
+
+        </div>
+      </div>
+
+      <div class="row p-0">
+        <div class="col copyright text-center">
+          <p class=""><small class="text-white-50">© 2022. All Rights Reserved.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
